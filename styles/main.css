@@ -48,10 +48,10 @@ h2 {
     -moz-osx-font-smoothing: grayscale;
   }
   ::selection {
-    background: rgb(94, 176, 239);
-    color: #ffffff;
+    background: rgb(255, 252, 103);
+    color: rgb(23, 23, 23);
     -webkit-background-clip: none;
-    -webkit-text-fill-color: #ffffff;
+    -webkit-text-fill-color: rgb(23, 23, 23);
   }
 }
 
@@ -73,7 +73,7 @@ img.next-image {
 
 .prose a:hover {
   color: rgb(23, 23, 23);
-  border-color: #000000;
+  border-color: rgb(23, 23, 23);
 }
 
 .nav-line .nav-link {
