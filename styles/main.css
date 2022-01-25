@@ -45,7 +45,6 @@ p {
 }
 li {
   color: rgb(133, 133, 133);
-  line-height: 1em;
 }
 
 @media screen and (min-device-pixel-ratio: 1.5),
