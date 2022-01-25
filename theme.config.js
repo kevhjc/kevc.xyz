@@ -2,8 +2,8 @@ const YEAR = new Date().getFullYear()
 
 export default {
   footer: (
-    <small style={{ display: 'block', marginTop: '8rem' }}>
-      <time>{YEAR}</time> © Kevin H. Chung
+    <small style={{ display: 'block', marginTop: '6rem' }}>
+      {/* <time>{YEAR}</time> © Kevin H. Chung */}
       <style jsx>{`
         a {
           float: right;
