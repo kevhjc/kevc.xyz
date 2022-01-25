@@ -78,8 +78,7 @@ img.next-image {
 }
 
 .prose a:hover {
-  color: rgb(23, 23, 23);
-  border-color: rgb(23, 23, 23);
+  border-color: rgb(70, 70, 70);
 }
 
 .nav-line .nav-link {
