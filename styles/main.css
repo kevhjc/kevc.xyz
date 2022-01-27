@@ -11,6 +11,8 @@
   --transition: 0.1s ease-in-out;
   --transition-slow: 0.3s ease-in-out;
 
+  --radius: 8px;
+
   --bg: #212121;
   --gray: #a2a2a2;
   --light-gray: #dedede;
@@ -88,7 +90,7 @@ a {
   font-style: italic;
   text-decoration: none !important;
   border-bottom: 2px solid var(--light-gray);
-  padding-bottom: 2px;
+  padding-bottom: 1px;
 }
 
 a:hover {
@@ -116,14 +118,6 @@ blockquote {
   border-left: 3px solid var(--light-gray);
 }
 
-button {
-  border: none;
-  padding: 0;
-  margin: 0;
-  line-height: inherit;
-  font-size: inherit;
-}
-
 p a,
 a.reset {
   outline: none;
@@ -147,6 +141,17 @@ details summary {
 
 code {
   font-family: var(--font-mono);
+}
+
+svg {
+  width: 26px;
+  height: 26px;
+}
+
+svg:hover {
+  color: var(--bg);
+  background-color: var(--selection, 0.25);
+  border-radius: var(--radius);
 }
 
 /* Custom overrides */
