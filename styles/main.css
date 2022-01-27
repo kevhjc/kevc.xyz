@@ -147,7 +147,7 @@ code {
 
 /* Custom overrides */
 .meta-line {
-  margin-top: -2.5rem;
+  margin-top: -2.5rem !important;
 }
 
 .prose-sm h1 {
@@ -156,9 +156,9 @@ code {
 }
 
 .prose-sm h2 {
-  margin-top: 0.2em;
-  margin-bottom: 1em;
-  line-height: 1.4;
+  margin-top: 0.2em !important;
+  margin-bottom: 1em !important;
+  line-height: 1.4 !important;
 }
 
 .nav-line .nav-link {
