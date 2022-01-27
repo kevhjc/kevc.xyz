@@ -2,6 +2,7 @@
   "private": true,
   "license": "MIT",
   "scripts": {
+    "lint": "next lint",
     "dev": "next",
     "build": "next build",
     "start": "next start"
@@ -11,8 +12,13 @@
     "next": "12.0.8",
     "nextra": "^2.0.0-beta.5",
     "nextra-theme-blog": "^2.0.0-beta.5",
+    "prettier": "^2.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "eslint": "8.7.0",
+    "eslint-config-next": "12.0.9"
   },
   "prettier": {
     "arrowParens": "always",
