@@ -147,12 +147,12 @@ code {
 
 /* Custom overrides */
 .meta-line {
-  margin-top: -2.5rem !important;
+  margin-top: -2.5rem;
 }
 
 .prose-sm h1 {
   font-size: 1.5rem !important;
-  margin-bottom: -1em;
+  margin-bottom: -1em !important;
 }
 
 .prose-sm h2 {
