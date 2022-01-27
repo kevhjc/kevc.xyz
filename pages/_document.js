@@ -4,8 +4,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
 export default function Document() {
   const meta = {
     title: 'Kevin H. Chung',
-    description:
-      'Software engineer based in Los Angeles, CA. Currently prototyping React applications at Reactrix.'
+    description: 'Software engineer based in Los Angeles, California.'
   }
 
   return (
