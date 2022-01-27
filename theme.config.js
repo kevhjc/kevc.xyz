@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 const YEAR = new Date().getFullYear()
 
 export default {
