@@ -1,4 +1,4 @@
-@import './inter.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
@@ -10,7 +10,7 @@
   --transition-slow: 0.3s ease-in-out;
 
   --bg: #212121;
-  --gray: #888888;
+  --gray: #a2a2a2;
   --light-gray: #dedede;
   --lighter-gray: #f5f5f5;
   --lightest-gray: #fafafa;
@@ -40,12 +40,6 @@ body {
   font-family: var(--font-sans);
   display: flex;
   flex-direction: column;
-}
-
-p,
-li {
-  letter-spacing: -0.33px;
-  font-size: 1.125rem;
 }
 
 h1,
@@ -83,7 +77,32 @@ h4 {
 
 hr {
   border: none;
-  border-bottom: 1px solid var(--light-gray);
+  border-bottom: 1px solid var(--lightest-gray);
+}
+
+a {
+  text-decoration: none !important;
+  border-bottom: 2px solid var(--light-gray);
+  padding-bottom: 2px;
+  transition: border-color var(--transition-slow) ease;
+}
+
+a:hover {
+  border-color: var(--grey);
+}
+
+p,
+li {
+  letter-spacing: -0.33px;
+  font-size: 1.125rem;
+}
+
+li a:hover,
+li a:focus,
+li a:active,
+li a.reset:hover,
+li a.reset:focus {
+  border-color: var(--bg);
 }
 
 blockquote {
@@ -112,7 +131,6 @@ p a:focus,
 p a:active,
 a.reset:hover,
 a.reset:focus {
-  color: var(--gray);
   border-color: var(--bg);
 }
 
@@ -127,9 +145,14 @@ code {
   font-family: var(--font-mono);
 }
 
-/* Theme overrides */
+/* Custom overrides */
 .meta-line {
-  margin-bottom: -2.5rem;
+  margin-top: -2.5rem;
+}
+
+.prose-sm h1 {
+  font-size: 1.5rem;
+  margin-bottom: -1em;
 }
 
 .prose-sm h2 {
@@ -138,21 +161,8 @@ code {
   line-height: 1.4;
 }
 
-.prose a {
-  text-decoration: none;
-  color: var(--bg);
-  border-bottom: 2px solid var(--gray);
-  padding-bottom: 2px;
-  transition: border-color var(--transition-slow) ease;
-}
-
-.prose a:hover {
-  color: inherit;
-  border-color: var(--light-grey);
-}
-
 .nav-line .nav-link {
-  color: var(--gray);
+  color: var(--light-gray);
 }
 
 @media screen and (min-device-pixel-ratio: 1.5),
