@@ -1,86 +1,172 @@
-@font-face {
-  font-family: 'Inter var';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: block;
-  src: url(/fonts/Inter-roman.latin.var.woff2) format('woff2');
+@import './inter.css';
+
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --font-mono: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo',
+    monospace;
+
+  --transition: 0.1s ease-in-out;
+  --transition-slow: 0.3s ease-in-out;
+
+  --bg: #212121;
+  --gray: #888888;
+  --light-gray: #dedede;
+  --lighter-gray: #f5f5f5;
+  --lightest-gray: #fafafa;
+  --selection: #ffeb3b;
 }
-@font-face {
-  font-family: 'Inter var';
-  font-style: italic;
-  font-weight: 100 900;
-  font-display: block;
-  src: url(/fonts/Inter-italic.latin.var.woff2) format('woff2');
-  font-named-instance: 'Italic';
+
+::selection {
+  text-shadow: none;
+  background: var(--selection);
+  color: var(--bg);
+}
+
+html {
+  line-height: 1.5;
+}
+
+html,
+body {
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  color: rgb(133, 133, 133);
-  font-family: 'Inter var', system-ui, -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: subpixel-antialiased;
-  font-feature-settings: 'case' 1, 'cpsp' 1, 'dlig' 1, 'cv01' 1, 'cv02',
-    'cv03' 1, 'cv04' 1;
-  font-variation-settings: 'wght' 450;
-  font-variant: common-ligatures contextual;
-  letter-spacing: -0.02em;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  display: flex;
+  flex-direction: column;
 }
-b,
-strong,
+
+p,
+li {
+  letter-spacing: -0.33px;
+  font-size: 1.125rem;
+}
+
+h1,
+h2,
 h3,
 h4,
 h5,
 h6 {
-  font-variation-settings: 'wght' 650;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  line-height: 1.75;
 }
+
 h1 {
-  font-variation-settings: 'wght' 850;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.89px;
 }
+
 h2 {
-  font-variation-settings: 'wght' 750;
+  font-size: 2rem;
+  letter-spacing: -0.69px;
 }
-p {
-  color: rgb(133, 133, 133);
+
+h3 {
+  font-size: 1.5rem;
+  letter-spacing: -0.47px;
 }
-li {
-  color: rgb(133, 133, 133);
+
+h4 {
+  font-size: 1.25rem;
+  letter-spacing: -0.33px;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+blockquote {
+  font-style: italic;
+  margin: 0;
+  padding-left: 1rem;
+  border-left: 3px solid var(--light-gray);
+}
+
+button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  line-height: inherit;
+  font-size: inherit;
+}
+
+p a,
+a.reset {
+  outline: none;
+  text-decoration: none;
+}
+
+p a:hover,
+p a:focus,
+p a:active,
+a.reset:hover,
+a.reset:focus {
+  color: var(--gray);
+  border-color: var(--bg);
+}
+
+details summary {
+  cursor: pointer;
+  outline: none;
+  background: var(--lightest-gray);
+  padding: 1rem;
+}
+
+code {
+  font-family: var(--font-mono);
+}
+
+/* Theme overrides */
+.meta-line {
+  margin-bottom: -2.5rem;
+}
+
+.prose-sm h2 {
+  margin-top: 0.2em;
+  margin-bottom: 1em;
+  line-height: 1.4;
+}
+
+.prose a {
+  text-decoration: none;
+  color: var(--bg);
+  border-bottom: 2px solid var(--gray);
+  padding-bottom: 2px;
+  transition: border-color var(--transition-slow) ease;
+}
+
+.prose a:hover {
+  color: inherit;
+  border-color: var(--light-grey);
+}
+
+.nav-line .nav-link {
+  color: var(--gray);
 }
 
 @media screen and (min-device-pixel-ratio: 1.5),
   screen and (min-resolution: 1.5dppx) {
   body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    --bg: #212121;
+    --gray: #888888;
+    --light-gray: #dedede;
+    --lighter-gray: #f5f5f5;
+    --lightest-gray: #fafafa;
+    --selection: #ffeb3b;
   }
-  ::selection {
-    background: rgb(255, 252, 103);
-    color: rgb(23, 23, 23);
-    -webkit-background-clip: none;
-    -webkit-text-fill-color: rgb(23, 23, 23);
+
+  * {
+    text-shadow: none !important;
   }
-}
-
-details summary {
-  cursor: pointer;
-}
-
-img.next-image {
-  margin: 0;
-}
-
-.prose a {
-  text-decoration: none;
-  color: rgb(23, 23, 23);
-  border-bottom: 2px solid rgb(199, 199, 199);
-  padding-bottom: 2px;
-  transition: border-color 150ms ease;
-}
-
-.prose a:hover {
-  border-color: rgb(70, 70, 70);
-}
-
-.nav-line .nav-link {
-  color: rgb(143, 143, 143);
 }
