@@ -1,15 +1,16 @@
+import React from 'react'
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
   const meta = {
     title: 'Kevin H. Chung',
-    description: 'kevc.xyz'
+    description:
+      'Software engineer based in Los Angeles, CA. Currently prototyping React applications at Reactrix.'
   }
 
   return (
     <Html lang="en">
       <Head>
-        <title>Kevin H. Chung</title>
         <meta name="robots" content="follow, index" />
         <meta name="description" content={meta.description} />
         <meta property="og:site_name" content={meta.title} />
