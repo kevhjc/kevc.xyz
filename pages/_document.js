@@ -16,6 +16,12 @@ export default function Document() {
         <meta property="og:site_name" content={meta.title} />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="../public/favicon.png"
+        />
       </Head>
       <body>
         <Main />
