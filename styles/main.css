@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 :root {
   /* Typefaces */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --font-serif: 'Newsreader', serif;
   --font-mono: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo',
     monospace;
-  --font-serif: 'Source Serif Pro', serif;
 
   /* Transitions */
   --transition: 0.1s ease-in-out;
@@ -90,8 +90,7 @@ hr {
 }
 
 a {
-  font-family: var(--font-serif);
-  font-style: italic;
+  font-family: var(--font-sans);
   text-decoration: none !important;
   border-bottom: 2px solid var(--light-gray);
   padding-bottom: 1px;
@@ -141,6 +140,15 @@ details summary {
   outline: none;
   background: var(--lightest-gray);
   padding: 1rem;
+}
+
+serif {
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+mono {
+  font-family: var(--font-mono);
 }
 
 /* Dark Mode Toggle Button */
