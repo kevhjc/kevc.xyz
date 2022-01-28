@@ -2,17 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 
 :root {
+  /* Typefaces */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   --font-mono: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo',
     monospace;
   --font-serif: 'Source Serif Pro', serif;
 
+  /* Transitions */
   --transition: 0.1s ease-in-out;
   --transition-slow: 0.3s ease-in-out;
 
+  /* Radius */
   --radius: 8px;
 
+  /* Theme */
   --bg: #212121;
   --gray: #a2a2a2;
   --light-gray: #dedede;
@@ -139,12 +143,7 @@ details summary {
   padding: 1rem;
 }
 
-error {
-  padding-top: 5vh;
-  text-align: center;
-  font-family: var(--font-mono);
-}
-
+/* Dark Mode Toggle Button */
 svg {
   width: 26px;
   height: 26px;
@@ -158,6 +157,13 @@ svg:hover {
 
 details summary {
   cursor: pointer;
+}
+
+/* Custom 404 Page */
+error {
+  padding-top: 5vh;
+  text-align: center;
+  font-family: var(--font-mono);
 }
 
 @media screen and (min-device-pixel-ratio: 1.5),
