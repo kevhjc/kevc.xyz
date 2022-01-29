@@ -15,6 +15,7 @@
 
   /* Radius */
   --radius: 8px;
+  --radius-small: 4px;
 
   /* Theme */
   --bg: #212121;
@@ -148,7 +149,11 @@ serif {
 }
 
 mono {
+  color: var(--bg);
   font-family: var(--font-mono);
+  padding: 2px;
+  background-color: var(--lighter-gray, 0.25);
+  border-radius: var(--radius-small);
 }
 
 /* Dark Mode Toggle Button */
@@ -169,8 +174,6 @@ details summary {
 
 /* Custom 404 Page */
 error {
-  padding-top: 5vh;
-  text-align: center;
   font-family: var(--font-mono);
 }
 
