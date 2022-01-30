@@ -136,13 +136,7 @@ a.reset:focus {
   border-color: var(--bg);
 }
 
-details summary {
-  cursor: pointer;
-  outline: none;
-  background: var(--lightest-gray);
-  padding: 1rem;
-}
-
+/* In-line Text Styles */
 serif {
   font-family: var(--font-serif);
   font-style: italic;
@@ -168,13 +162,14 @@ svg:hover {
   border-radius: var(--radius);
 }
 
-details summary {
-  cursor: pointer;
-}
-
-/* Custom 404 Page */
+/* 404 Page */
 error {
+  min-height: 100vh;
   font-family: var(--font-mono);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (min-device-pixel-ratio: 1.5),
