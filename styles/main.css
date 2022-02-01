@@ -154,6 +154,9 @@ mono {
 svg {
   width: 26px;
   height: 26px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
 }
 
 svg:hover {
