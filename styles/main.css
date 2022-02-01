@@ -147,6 +147,19 @@ mono {
   font-family: var(--font-mono);
 }
 
+/* Navigation Button */
+button {
+  padding: 6px;
+  color: var(--bg);
+  background-color: var(--lighter-gray);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+button:hover {
+  background-color: var(--light-gray);
+}
+
 /* 404 Page */
 error {
   min-height: 100vh;
