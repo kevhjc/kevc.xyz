@@ -20,7 +20,7 @@
   /* Theme */
   --bg: #212121;
   --text: #212121;
-  --gray: #cbcbcb;
+  --gray: #dcdcdc;
   --light-gray: #dedede;
   --lighter-gray: #f5f5f5;
   --lightest-gray: #fafafa;
@@ -166,7 +166,7 @@ error {
   body {
     --bg: #212121;
     --text: #212121;
-    --gray: #888888;
+    --gray: #dcdcdc;
     --light-gray: #dedede;
     --lighter-gray: #f5f5f5;
     --lightest-gray: #fafafa;
@@ -200,10 +200,9 @@ error {
   color: var(--bg) !important;
   background-color: var(--lightest-gray) !important;
   border-radius: var(--radius) !important;
+  transition: var(--transition-slow);
 }
 
 .p-2:hover {
-  color: var(--bg) !important;
   background-color: var(--gray) !important;
-  border-radius: var(--radius) !important;
 }
