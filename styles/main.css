@@ -151,7 +151,7 @@ mono {
 button {
   padding: 6px !important;
   color: var(--bg);
-  background-color: var(--lighter-gray);
+  background-color: var(--lighter-gray) !important;
   border-radius: var(--radius);
   transition: var(--transition);
 }
