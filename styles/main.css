@@ -147,19 +147,6 @@ mono {
   font-family: var(--font-mono);
 }
 
-/* Navigation Button */
-button {
-  padding: 6px !important;
-  color: var(--bg);
-  background-color: var(--lighter-gray) !important;
-  border-radius: var(--radius);
-  transition: var(--transition);
-}
-
-button:hover {
-  background-color: var(--light-gray) !important;
-}
-
 /* 404 Page */
 error {
   min-height: 100vh;
@@ -217,4 +204,17 @@ error {
 
 .p-2:hover {
   background-color: var(--gray) !important;
+}
+
+/* Navigation Button */
+button {
+  padding: 6px !important;
+  color: var(--bg) !important;
+  background-color: var(--lighter-gray) !important;
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+button:hover {
+  background-color: var(--light-gray) !important;
 }
