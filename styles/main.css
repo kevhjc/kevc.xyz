@@ -151,21 +151,6 @@ mono {
   border-radius: var(--radius-small);
 }
 
-/* Dark Mode Toggle Button */
-svg {
-  width: 26px;
-  height: 26px;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-}
-
-svg:hover {
-  color: var(--bg);
-  background-color: var(--selection, 0.25);
-  border-radius: var(--radius);
-}
-
 /* 404 Page */
 error {
   min-height: 100vh;
@@ -196,6 +181,7 @@ error {
 /* Custom overrides */
 .meta-line {
   margin-top: -2.4rem !important;
+  min-width: 190px;
 }
 
 .prose-sm h1 {
@@ -207,4 +193,17 @@ error {
   margin-top: 0.2em !important;
   margin-bottom: 1em !important;
   line-height: 1.4 !important;
+}
+
+.p-2 {
+  padding: 6px;
+  color: var(--bg);
+  background-color: var(--lighter-gray);
+  border-radius: var(--radius);
+}
+
+.p-2:hover {
+  color: var(--bg);
+  background-color: var(--light-gray);
+  border-radius: var(--radius);
 }
