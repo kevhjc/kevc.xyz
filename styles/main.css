@@ -201,6 +201,9 @@ error {
   background-color: var(--lightest-gray) !important;
   border-radius: var(--radius) !important;
   transition: var(--transition-slow);
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
 }
 
 .p-2:hover {
