@@ -144,7 +144,6 @@ serif {
 }
 
 mono {
-  color: var(--text);
   font-family: var(--font-mono);
 }
 
