@@ -19,6 +19,7 @@
 
   /* Theme */
   --bg: #212121;
+  --text: #212121;
   --gray: #a2a2a2;
   --light-gray: #dedede;
   --lighter-gray: #f5f5f5;
@@ -29,7 +30,7 @@
 ::selection {
   text-shadow: none;
   background: var(--selection);
-  color: var(--bg);
+  color: var(--text);
 }
 
 html {
@@ -143,7 +144,7 @@ serif {
 }
 
 mono {
-  color: var(--bg);
+  color: var(--text);
   font-family: var(--font-mono);
   padding: 2px;
   background-color: var(--lighter-gray, 0.25);
@@ -179,6 +180,7 @@ error {
   screen and (min-resolution: 1.5dppx) {
   body {
     --bg: #212121;
+    --text: #212121;
     --gray: #888888;
     --light-gray: #dedede;
     --lighter-gray: #f5f5f5;
@@ -205,8 +207,4 @@ error {
   margin-top: 0.2em !important;
   margin-bottom: 1em !important;
   line-height: 1.4 !important;
-}
-
-.nav-line .nav-link {
-  color: var(--light-gray);
 }
