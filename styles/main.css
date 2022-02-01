@@ -149,7 +149,7 @@ mono {
 
 /* Navigation Button */
 button {
-  padding: 6px;
+  padding: 6px !important;
   color: var(--bg);
   background-color: var(--lighter-gray);
   border-radius: var(--radius);
