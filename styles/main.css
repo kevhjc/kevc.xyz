@@ -157,7 +157,7 @@ button {
 }
 
 button:hover {
-  background-color: var(--light-gray);
+  background-color: var(--light-gray) !important;
 }
 
 /* 404 Page */
