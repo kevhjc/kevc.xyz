@@ -1,5 +1,6 @@
 # kevc.xyz
 
-![kevc xyz](https://user-images.githubusercontent.com/63880429/152044801-8d6edef2-0f8f-45ce-a5c3-ea6ba29dcee2.png)
-
-Built using [Next.js](https://nextjs.org/) & [forked from Nextra](https://github.com/shuding/nextra) as the front-end framework, written in [MDX](https://mdxjs.com/), deployed on [Vercel](https://vercel.com), and monitored with [Checkly](https://www.checklyhq.com/).
+- Forked from [Nextra](https://github.com/shuding/nextra) and built using [Next.js](https://nextjs.org/)
+- Written in [MDX](https://mdxjs.com/)
+- Deployed on [Vercel](https://vercel.com)
+- Monitored with [Checkly](https://www.checklyhq.com/)
