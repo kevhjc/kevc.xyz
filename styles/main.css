@@ -204,6 +204,6 @@ error {
 
 .p-2:hover {
   color: var(--bg) !important;
-  background-color: var(--lighter-gray) !important;
+  background-color: var(--gray) !important;
   border-radius: var(--radius) !important;
 }
