@@ -8,9 +8,7 @@ export default function Custom404() {
       <Head>
         <title>404 – Kevin H. Chung</title>
       </Head>
-      <p>
-        <h2>{`404 - Not found`}</h2>
-      </p>
+      <h2>{`404 - Not found`}</h2>
       <p>{'Nothing to see here'}</p>
       <br />
       <Link href="/">
