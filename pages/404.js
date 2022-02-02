@@ -4,16 +4,11 @@ import Link from 'next/link'
 
 export default function Custom404() {
   return (
-    <error>
+    <>
       <Head>
         <title>404 – Kevin H. Chung</title>
       </Head>
-      <h2>{`404 - Not found`}</h2>
-      <p>{'Nothing to see here'}</p>
-      <br />
-      <Link href="/">
-        <button>Go home</button>
-      </Link>
-    </error>
+      <error>{`404 - Not found`}</error>
+    </>
   )
 }
