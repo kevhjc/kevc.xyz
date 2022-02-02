@@ -137,7 +137,7 @@ a.reset:focus {
   border-color: var(--bg);
 }
 
-/* In-line Text Styles */
+/* In-line Text */
 serif {
   font-family: var(--font-serif);
   font-style: italic;
@@ -155,6 +155,7 @@ error {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 @media screen and (min-device-pixel-ratio: 1.5),
