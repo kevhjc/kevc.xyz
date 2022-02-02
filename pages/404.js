@@ -6,9 +6,12 @@ export default function Custom404() {
   return (
     <error>
       <Head>
-        <title>404</title>
+        <title>404 – Kevin H. Chung</title>
       </Head>
-      <p>404 - Page Not Found 🤔</p>
+      <p>
+        <h2>{`404 - Not found`}</h2>
+      </p>
+      <p>{'Nothing to see here'}</p>
       <br />
       <Link href="/">
         <button>Go home</button>
