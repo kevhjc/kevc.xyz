@@ -7,7 +7,7 @@ export default function Custom404() {
       <p>404 - Page Not Found 🤔</p>
       <br />
       <Link href="/">
-        <button>&#8592; Go Home</button>
+        <button>&larr; Go Home</button>
       </Link>
     </error>
   )
