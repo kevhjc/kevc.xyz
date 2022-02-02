@@ -193,8 +193,6 @@ error {
 
 .p-2 {
   padding: 6px !important;
-  color: var(--bg) !important;
-  background-color: var(--lightest-gray) !important;
   border-radius: var(--radius) !important;
   transition: var(--transition-slow);
   user-select: none;
@@ -203,7 +201,8 @@ error {
 }
 
 .p-2:hover {
-  background-color: var(--gray) !important;
+  color: var(--bg) !important;
+  background-color: var(--lighter-gray) !important;
 }
 
 /* Navigation Button */
