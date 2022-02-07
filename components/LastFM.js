@@ -4,12 +4,12 @@ export default function CurrentlyPlaying() {
   const lastFM = useLastFM('kevhjc', process.env.NEXT_PUBLIC_LASTFM_API_KEY)
 
   if (lastFM.status !== 'playing') {
-    return <p>nothing</p>
+    return <p>Not listening to anything</p>
   }
 
   return (
     <p>
-      {lastFM.song.name} by {lastFM.song.artist}
+      Listening to {lastFM.song.name} by {lastFM.song.artist}
     </p>
   )
 }
