@@ -9,7 +9,7 @@ export default function CurrentlyPlaying() {
 
   return (
     <p>
-      <b>{lastFM.song.name}</b> by <b>{lastFM.song.artist}</b>
+      {lastFM.song.name} by {lastFM.song.artist}
     </p>
   )
 }
