@@ -6,7 +6,7 @@ import '../styles/main.css'
 
 export default function App({ Component, pageProps }) {
   return (
-    <FadeIn delay={75}>
+    <FadeIn transitionDuration={800}>
       <Component {...pageProps} />
     </FadeIn>
   )
