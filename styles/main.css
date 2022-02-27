@@ -46,7 +46,6 @@ body {
 }
 
 body {
-  padding-top: 5vh;
   min-height: 100vh;
   font-family: var(--font-sans);
   display: flex;
@@ -183,6 +182,7 @@ error {
 
 .prose-sm h1 {
   font-size: 1.5rem !important;
+  margin-top: 4rem !important;
   margin-bottom: -1em !important;
 }
 
