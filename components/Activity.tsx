@@ -63,7 +63,7 @@ export function Song() {
             <h2 className="text-sm font-bold">{relativeDate}</h2>
           </time>
         )}
-        {playing && <h2 className="font-bold">Currently listening to</h2>}
+        {playing && <h2 className="text-sm font-bold">Currently listening</h2>}
       </div>
       <p className="font-semibold truncate text-neutral-800 dark:text-neutral-300">
         {title}
