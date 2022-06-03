@@ -5,7 +5,9 @@ import FadeIn from 'react-fade-in';
 export default function Activity() {
   const lastFM = useLastFM(
     'kevhjc',
-    process.env.NEXT_PUBLIC_LASTFM_API_KEY || ''
+    process.env.NEXT_PUBLIC_LASTFM_API_KEY || '',
+    undefined,
+    'extralarge'
   );
 
   return (
@@ -31,8 +33,10 @@ export default function Activity() {
             <div className="grid items-center grid-flow-col gap-4 mt-4">
               <div className="h-20 overflow-hidden rounded aspect-square bg-neutral-100 dark:bg-neutral-800">
                 <Image
+                  priority={true}
+                  alt="Album artwork"
                   src={lastFM.song.art}
-                  alt="Picture of the author"
+                  objectFit="cover"
                   width={200}
                   height={200}
                 />
@@ -41,7 +45,7 @@ export default function Activity() {
                 <p className="text-lg font-black leading-snug text-neutral-800 dark:text-neutral-300">
                   {lastFM.song.name}
                 </p>
-                <p className="text-sm leading-snug text-neutral-500 dark:text-neutral-400">
+                <p className="text-sm font-semibold leading-snug text-neutral-500 dark:text-neutral-400">
                   {lastFM.song.artist}
                   {' — '}
                   {lastFM.song.album}
