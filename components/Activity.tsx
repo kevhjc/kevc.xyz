@@ -7,8 +7,6 @@ export default function Activity() {
     process.env.NEXT_PUBLIC_LASTFM_API_KEY || ''
   );
 
-  console.log(lastFM);
-
   return (
     <>
       {lastFM.status === 'playing' && (
