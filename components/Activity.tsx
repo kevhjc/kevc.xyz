@@ -28,7 +28,7 @@ export function Song() {
   }, [absoluteDate]);
 
   return (
-    <div className="grid items-center grid-flow-col grid-rows-3 mt-7 gap-x-4">
+    <div className="grid items-center grid-flow-col grid-rows-3 mt-7 w-fit gap-x-4">
       <div className="h-20 row-span-3 overflow-hidden rounded aspect-square bg-neutral-200 dark:bg-neutral-800">
         {cover && (
           <Image
@@ -143,7 +143,7 @@ export function Film() {
 export default function Activity() {
   return (
     <FadeIn delay={800} transitionDuration={800}>
-      <div className="w-3/4 mt-16 leading-snug text-red-500 transition-all dark:text-red-400">
+      <div className="mt-16 leading-snug text-red-500 transition-all dark:text-red-400">
         <h2 className="mt-10 text-lg font-semibold text-black dark:text-neutral-200">
           Activity
         </h2>
