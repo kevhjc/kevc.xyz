@@ -86,9 +86,7 @@ export async function getLatestSong(): Promise<Response | undefined> {
     );
 
     const song = response.recenttracks?.track?.[0];
-    const date = response.recenttracks?.track?.[1].date?.uts
-      ? Number(song.date?.uts)
-      : undefined;
+    const date = song.date?.uts ? Number(song.date?.uts) : undefined;
     const mbid = song.album.mbid;
     let year: number | undefined;
 
@@ -137,7 +135,7 @@ export default async function route(req: NextApiRequest, res: NextApiResponse) {
       res.status(200).json(song);
     } catch (e) {
       console.error('Request error', e);
-      res.status(500).json({ error: 'Error fetching latest song' });
+      res.status(500).send(undefined);
     }
   }
 }

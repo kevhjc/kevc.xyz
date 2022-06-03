@@ -46,7 +46,7 @@ export default function Activity() {
               className="mb-2 font-semibold"
               dateTime={absoluteDate.toISOString()}
             >
-              {relativeDate}
+              <h2 className="mb-2 font-semibold">{relativeDate}</h2>
             </time>
           )}
           {playing && (
