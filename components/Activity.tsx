@@ -13,10 +13,10 @@ export default function Activity() {
       {lastFM.status === 'playing' && (
         <FadeIn delay={300}>
           <div className="mt-16 font-medium leading-loose text-red-500 transition-all w-fit dark:text-red-400">
-            <div className="flex justify-start animate-pulse">
+            <div className="flex justify-start">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="mr-2 mt-[8px] h-4 w-4 flex-none"
+                className="mr-2 mt-[8px] h-4 w-4 flex-none animate-pulse"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
