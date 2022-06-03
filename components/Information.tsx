@@ -7,7 +7,7 @@ export default function Information() {
         <div className="flex">
           <div className="relative w-24 h-24 duration-500 ease-in-out hover:scale-105">
             <img
-              className="rounded-full shadow-lg"
+              className="rounded-full shadow-lg dark:invert"
               src="/avatar.png"
               alt="user image"
             />
