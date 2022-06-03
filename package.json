@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start"
   },
   "dependencies": {
     "classnames": "^2.3.1",
@@ -15,13 +14,13 @@
     "next-themes": "^0.1.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-fade-in": "^2.0.1",
-    "use-last-fm": "^0.6.1"
+    "react-fade-in": "^2.0.1"
   },
   "devDependencies": {
     "@types/node": "17.0.4",
     "@types/react": "17.0.38",
     "autoprefixer": "^10.4.0",
+    "eslint": "^8.16.0",
     "postcss": "^8.4.5",
     "prettier": "^2.5.1",
     "prettier-plugin-tailwindcss": "^0.1.1",
