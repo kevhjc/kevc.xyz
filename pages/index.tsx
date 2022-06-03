@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Container from 'components/Container';
 import Information from 'components/Information';
 import Elsewhere from 'components/Elsewhere';
-import Activity from 'components/Activity';
+import Activity, { Film } from 'components/Activity';
 
 export default function Home() {
   return (

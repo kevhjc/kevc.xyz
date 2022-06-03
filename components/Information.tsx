@@ -4,12 +4,12 @@ export default function Information() {
   return (
     <FadeIn delay={200} transitionDuration={800}>
       <div className="leading-loose">
-        <h2 className="mb-4 font-semibold text-black dark:text-neutral-200">
+        <h2 className="mb-4 text-lg font-semibold text-black dark:text-neutral-200">
           Kevin H. Chung
         </h2>
         <p className="mb-4 text-neutral-800 dark:text-neutral-300">
           Software engineer based in{' '}
-          <span className="font-serif text-lg italic font-medium">
+          <span className="font-serif text-lg italic">
             Los Angeles, California
           </span>
           .
