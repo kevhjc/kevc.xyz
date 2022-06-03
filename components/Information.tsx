@@ -11,7 +11,7 @@ export default function Information() {
               src="/avatar.png"
               alt="user image"
             />
-            <div className="absolute w-8 h-8 m-auto my-1 text-center rounded-full z-2 -top-2 -right-2 animate-gradient bg-gradient-to-r from-emerald-400 via-sky-400 to-rose-400">
+            <div className="absolute w-8 h-8 m-auto my-1 text-center rounded-full z-2 -top-1 -right-1 animate-gradient bg-gradient-to-r from-emerald-400 via-sky-400 to-rose-400">
               ✌️
             </div>
           </div>
