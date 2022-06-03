@@ -12,7 +12,7 @@ export default function Container(props: ContainerProps) {
   };
 
   return (
-    <div className="mx-auto flex min-h-screen items-center justify-center">
+    <div className="flex items-center justify-center mx-auto md:pt-28">
       <div className="max-w-3xl p-10">
         <Head>
           <meta name="robots" content="follow, index" />
