@@ -2,9 +2,9 @@ import FadeIn from 'react-fade-in';
 
 export default function Elsewhere() {
   return (
-    <FadeIn delay={200}>
+    <FadeIn delay={500} transitionDuration={800}>
       <div className="leading-loose">
-        <h2 className="mt-8 font-semibold text-black dark:text-neutral-200">
+        <h2 className="mt-10 font-semibold text-black dark:text-neutral-200">
           Elsewhere
         </h2>
         <p className="mt-4 space-x-4 text-neutral-800 dark:text-neutral-300">

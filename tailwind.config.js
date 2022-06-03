@@ -18,8 +18,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ['Inter', 'sans-serif'],
-      serif: ['Newsreader', 'serif'],
+      sans: ['Satoshi', 'sans-serif'],
+      serif: ['IBM Plex Serif', 'serif'],
     },
   },
   plugins: [],

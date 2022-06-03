@@ -13,7 +13,7 @@ export default function Container(props: ContainerProps) {
 
   return (
     <div className="flex items-center justify-center mx-auto md:pt-28">
-      <div className="max-w-3xl p-10">
+      <div className="max-w-2xl p-10">
         <Head>
           <meta name="robots" content="follow, index" />
           <meta content={meta.description} name="description" />

@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-neutral-100 font-sans text-neutral-900 dark:bg-neutral-900 dark:text-neutral-200;
+    @apply font-sans bg-neutral-100 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-200;
   }
 }
 
@@ -21,7 +21,7 @@
 html,
 body {
   min-width: 320px;
-  font-size: 15px;
+  font-size: 16px;
   scroll-behavior: smooth;
 }
 

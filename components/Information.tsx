@@ -2,14 +2,17 @@ import FadeIn from 'react-fade-in';
 
 export default function Information() {
   return (
-    <FadeIn delay={50}>
+    <FadeIn delay={200} transitionDuration={800}>
       <div className="leading-loose">
         <h2 className="mb-4 font-semibold text-black dark:text-neutral-200">
           Kevin H. Chung
         </h2>
         <p className="mb-4 text-neutral-800 dark:text-neutral-300">
           Software engineer based in{' '}
-          <span className="font-serif italic">Los Angeles, California</span>.
+          <span className="font-serif italic font-medium">
+            Los Angeles, California
+          </span>
+          .
         </p>
         <p className="text-neutral-800 dark:text-neutral-300">
           Prototyping React applications at{' '}
