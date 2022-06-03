@@ -9,7 +9,7 @@ export default function Information() {
         </h2>
         <p className="mb-4 text-neutral-800 dark:text-neutral-300">
           Software engineer based in{' '}
-          <span className="font-serif italic font-medium">
+          <span className="font-serif text-lg italic font-medium">
             Los Angeles, California
           </span>
           .
