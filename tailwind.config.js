@@ -16,6 +16,21 @@ module.exports = {
       screens: {
         dark: { raw: '(prefers-color-scheme: dark)' },
       },
+      animation: {
+        gradient: 'gradient-xy 15s ease infinite',
+      },
+      keyframes: {
+        'gradient-xy': {
+          '0%, 100%': {
+            'background-size': '400% 400%',
+            'background-position': 'right center',
+          },
+          '50%': {
+            'background-size': '400% 400%',
+            'background-position': 'left center',
+          },
+        },
+      },
     },
     fontFamily: {
       sans: ['Satoshi', 'sans-serif'],

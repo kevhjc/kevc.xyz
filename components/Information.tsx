@@ -4,7 +4,19 @@ export default function Information() {
   return (
     <FadeIn delay={200} transitionDuration={800}>
       <div className="leading-loose">
-        <h2 className="mb-4 text-lg font-semibold text-black dark:text-neutral-200">
+        <div className="flex">
+          <div className="relative w-24 h-24 duration-500 ease-in-out hover:scale-105">
+            <img
+              className="rounded-full shadow-lg"
+              src="/avatar.png"
+              alt="user image"
+            />
+            <div className="absolute w-8 h-8 m-auto my-1 text-center rounded-full z-2 -top-2 -right-2 animate-gradient bg-gradient-to-r from-emerald-400 via-sky-400 to-rose-400">
+              ✌️
+            </div>
+          </div>
+        </div>
+        <h2 className="mt-4 mb-4 text-lg font-semibold text-black dark:text-neutral-200">
           Kevin H. Chung
         </h2>
         <p className="mb-4 text-neutral-800 dark:text-neutral-300">
