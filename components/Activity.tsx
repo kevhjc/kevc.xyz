@@ -5,10 +5,10 @@ import cn from 'classnames';
 import isYesterday from 'date-fns/isYesterday';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 
-import { useLatestSong } from 'hooks/useLatestSong';
+import { useLatestSong } from '../hooks/useLatestSong';
 
 export default function Activity() {
-  const { artist, album, cover, date, title, playing } = useLatestSong();
+  const { title, artist, album, date, year, cover, playing } = useLatestSong();
 
   const absoluteDate = useMemo(() => {
     if (!date) return;
