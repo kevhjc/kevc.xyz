@@ -28,7 +28,7 @@ export function Song() {
   }, [absoluteDate]);
 
   return (
-    <div className="grid items-center grid-flow-col grid-rows-3 mt-7 w-fit gap-x-4">
+    <div className="grid items-center grid-flow-col grid-rows-3 mt-8 w-fit gap-x-4">
       <div className="h-20 row-span-3 overflow-hidden rounded aspect-square bg-neutral-200 dark:bg-neutral-800">
         {cover && (
           <Image
@@ -98,7 +98,7 @@ export function Film() {
   }, [absoluteDate]);
 
   return (
-    <div className="mt-6 leading-snug text-green-500 transition-all w-fit dark:text-green-400">
+    <div className="mt-8 leading-snug text-green-500 transition-all w-fit dark:text-green-400">
       <div className="grid items-center grid-flow-col grid-rows-3 gap-x-4">
         <div className="relative row-span-3 aspect-[2/3] h-20 flex-none overflow-hidden rounded bg-neutral-200 dark:bg-neutral-800">
           {poster && (

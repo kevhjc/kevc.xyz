@@ -54,8 +54,8 @@ export default function Information() {
           .
         </p>
         <p className="mt-4 text-neutral-800 dark:text-neutral-300">
-          Building projects and experimenting with new tools and libraries in
-          the open.
+          Building projects and experimenting with new tools & libraries in the
+          open.
         </p>
       </div>
     </FadeIn>
