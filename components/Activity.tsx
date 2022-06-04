@@ -65,10 +65,10 @@ export function Song() {
         )}
         {playing && <h2 className="text-sm font-bold">Currently listening</h2>}
       </div>
-      <p className="font-semibold truncate text-neutral-800 dark:text-neutral-300">
+      <p className="text-sm font-semibold truncate md:text-md text-neutral-800 dark:text-neutral-300">
         {title}
       </p>
-      <p className="font-medium truncate text-neutral-500 dark:text-neutral-400">
+      <p className="text-sm font-medium truncate md:text-md text-neutral-500 dark:text-neutral-400">
         {artist}
         {' — '}
         {album}
@@ -129,10 +129,10 @@ export function Film() {
             </time>
           )}
         </div>
-        <p className="font-semibold truncate text-md text-neutral-800 dark:text-neutral-300">
+        <p className="text-sm font-semibold truncate md:text-md text-neutral-800 dark:text-neutral-300">
           {title}
         </p>
-        <p className="font-medium truncate text-neutral-500 dark:text-neutral-400">
+        <p className="text-sm font-medium truncate md:text-md text-neutral-500 dark:text-neutral-400">
           {year}
         </p>
       </div>

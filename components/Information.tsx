@@ -16,7 +16,7 @@ export default function Information() {
             </div>
           </div>
         </div>
-        <h2 className="mt-4 mb-4 text-lg font-semibold text-black dark:text-neutral-200">
+        <h2 className="mt-6 mb-4 text-lg font-semibold text-black dark:text-neutral-200">
           Kevin H. Chung
         </h2>
         <p className="mb-4 text-neutral-800 dark:text-neutral-300">
