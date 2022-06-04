@@ -6,7 +6,7 @@ import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 import isToday from 'date-fns/isToday';
 import isYesterday from 'date-fns/isYesterday';
 
-import { useLatestSong } from '../hooks/useLatestSong';
+import { useLatestSong } from 'hooks/useLatestSong';
 import { useLatestFilm } from 'hooks/useLatestFilm';
 import { capitalize } from 'lib/utils';
 
