@@ -4,8 +4,6 @@ import { REACTRIX, CLEMENTINE, BOOKMARKR, VAVLT } from 'lib/contants';
 import ProjectLink from './ProjectLink';
 
 export default function Information() {
-  console.log(REACTRIX.name);
-
   return (
     <FadeIn delay={200} transitionDuration={800}>
       <div className="leading-loose">
