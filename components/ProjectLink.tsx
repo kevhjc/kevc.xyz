@@ -12,15 +12,16 @@ export default function ProjectLink({ name, href, src, style }: ProjectProps) {
       <Popover className="relative">
         {() => (
           <>
-            <Popover.Button
+            <a
               className={style}
+              href={href}
+              rel="noopener noreferrer"
+              target="_blank"
               onMouseEnter={() => setIsShowing(true)}
               onMouseLeave={() => setIsShowing(false)}
             >
-              <a href={href} rel="noopener noreferrer" target="_blank">
-                {name}
-              </a>
-            </Popover.Button>
+              {name}
+            </a>
             <Transition
               as={Fragment}
               show={isShowing}
