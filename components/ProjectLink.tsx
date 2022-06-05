@@ -35,13 +35,7 @@ export default function ProjectLink({ name, href, src, style }: ProjectProps) {
               <Popover.Panel className="absolute z-10 mt-1 w-[80px]">
                 <div className="overflow-hidden">
                   <div className="relative">
-                    <Image
-                      priority={true}
-                      alt={name}
-                      src={src}
-                      width={200}
-                      height={200}
-                    />
+                    <Image alt={name} src={src} width={200} height={200} />
                   </div>
                 </div>
               </Popover.Panel>

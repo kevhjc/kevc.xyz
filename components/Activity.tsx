@@ -32,7 +32,6 @@ export function Song() {
       <div className="h-20 row-span-3 overflow-hidden duration-300 ease-in-out rounded aspect-square bg-neutral-200 hover:scale-105 dark:bg-neutral-800">
         {cover && (
           <Image
-            priority={true}
             alt={title}
             src={cover}
             objectFit="cover"

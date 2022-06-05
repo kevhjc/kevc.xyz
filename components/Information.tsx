@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import FadeIn from 'react-fade-in';
 
 import { REACTRIX, CLEMENTINE, BOOKMARKR, VAVLT } from 'lib/contants';
@@ -9,10 +10,11 @@ export default function Information() {
       <div className="leading-loose">
         <div className="flex">
           <div className="relative w-24 h-24 duration-500 ease-in-out hover:scale-105">
-            <img
+            <Image
               className="rounded-full shadow-lg dark:invert"
+              alt="Avatar"
               src="/avatar.png"
-              alt="user image"
+              layout="fill"
             />
             <span className="absolute w-8 h-8 m-auto my-1 text-center rounded-full z-2 -top-1 -right-1 animate-gradient bg-gradient-to-r from-emerald-400 via-sky-400 to-rose-400">
               ✌️
