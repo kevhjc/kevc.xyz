@@ -20,7 +20,7 @@
 
 html,
 body {
-  min-width: 320px;
+  height: 100%;
   font-size: 16px;
   scroll-behavior: smooth;
 }
@@ -55,4 +55,9 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
 }
