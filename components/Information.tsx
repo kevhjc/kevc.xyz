@@ -12,7 +12,7 @@ export default function Information() {
           <div className="relative w-24 h-24 duration-500 ease-in-out hover:scale-105">
             <Image
               priority={true}
-              className="rounded-full shadow-lg pointer-events-none dark:invert"
+              className="rounded-full dark:invert"
               alt="Avatar"
               src="/avatar.png"
               layout="fill"
