@@ -6,5 +6,4 @@ export interface ProjectProps {
   name: string;
   href: string;
   src: string;
-  style: string;
 }

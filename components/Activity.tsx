@@ -29,9 +29,10 @@ export function Song() {
 
   return (
     <div className="grid items-center grid-flow-col grid-rows-3 mt-8 w-fit gap-x-4">
-      <div className="h-20 row-span-3 overflow-hidden duration-300 ease-in-out rounded aspect-square bg-neutral-200 hover:scale-105 dark:bg-neutral-800">
+      <div className="h-20 row-span-3 overflow-hidden duration-300 ease-in-out rounded aspect-square bg-neutral-200 hover:rotate-3 hover:scale-105 dark:bg-neutral-800">
         {cover && (
           <Image
+            className="pointer-events-none"
             alt={title}
             src={cover}
             objectFit="cover"
@@ -64,10 +65,10 @@ export function Song() {
         )}
         {playing && <h2 className="text-sm font-bold">Currently listening</h2>}
       </div>
-      <p className="text-sm font-semibold truncate md:text-md text-neutral-800 dark:text-neutral-300">
+      <p className="text-sm font-semibold truncate md:text-md w-fit text-neutral-800 dark:text-neutral-300">
         {title}
       </p>
-      <p className="text-sm font-medium truncate md:text-md text-neutral-500 dark:text-neutral-400">
+      <p className="text-sm font-medium truncate md:text-md w-fit text-neutral-500 dark:text-neutral-400">
         {artist}
         {' — '}
         {album}
@@ -99,9 +100,15 @@ export function Film() {
   return (
     <div className="mt-8 leading-snug text-green-500 transition-all w-fit dark:text-green-400">
       <div className="grid items-center grid-flow-col grid-rows-3 gap-x-4">
-        <div className="relative row-span-3 aspect-[2/3] h-20 flex-none overflow-hidden rounded bg-neutral-200 duration-300 ease-in-out hover:scale-105 dark:bg-neutral-800">
+        <div className="relative row-span-3 aspect-[2/3] h-20 flex-none overflow-hidden rounded bg-neutral-200 duration-300 ease-in-out hover:-rotate-3 hover:scale-105 dark:bg-neutral-800">
           {poster && (
-            <Image alt={title} src={poster} objectFit="cover" layout="fill" />
+            <Image
+              className="pointer-events-none"
+              alt={title}
+              src={poster}
+              objectFit="cover"
+              layout="fill"
+            />
           )}
         </div>
         <div className="flex justify-start">
@@ -128,10 +135,10 @@ export function Film() {
             </time>
           )}
         </div>
-        <p className="text-sm font-semibold truncate md:text-md text-neutral-800 dark:text-neutral-300">
+        <p className="text-sm font-semibold truncate md:text-md w-fit text-neutral-800 dark:text-neutral-300">
           {title}
         </p>
-        <p className="text-sm font-medium truncate md:text-md text-neutral-500 dark:text-neutral-400">
+        <p className="text-sm font-medium truncate md:text-md w-fit text-neutral-500 dark:text-neutral-400">
           {year}
         </p>
       </div>

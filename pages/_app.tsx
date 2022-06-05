@@ -30,12 +30,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           <meta content="initial-scale=1, viewport-fit=cover" name="viewport" />
           <meta name="robots" content="follow, index" />
           <meta content={meta.description} name="description" />
-          <link rel="shortcut icon" href="/favicon.ico" />
-          <link
-            rel="apple-touch-icon"
-            href="/apple-touch-icon.png"
-            sizes="180x180"
-          />
         </Head>
         <Component {...pageProps} />
       </ThemeProvider>
