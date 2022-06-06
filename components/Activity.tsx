@@ -28,8 +28,8 @@ export function Song() {
   }, [absoluteDate]);
 
   return (
-    <div className="grid items-center grid-flow-col grid-rows-3 mt-8 w-fit gap-x-4">
-      <div className="h-20 row-span-3 overflow-hidden duration-300 ease-in-out rounded aspect-square bg-neutral-200 hover:rotate-3 hover:scale-105 dark:bg-neutral-800">
+    <div className="mt-8 grid w-fit grid-flow-col grid-rows-3 items-center gap-x-4">
+      <div className="row-span-3 aspect-square h-20 overflow-hidden rounded bg-neutral-200 duration-300 ease-in-out hover:rotate-3 hover:scale-105 dark:bg-neutral-800">
         {cover && (
           <Image
             className="pointer-events-none"
@@ -57,7 +57,7 @@ export function Song() {
 
         {absoluteDate && (
           <time
-            className="font-mono text-sm font-semibold"
+            className="font-mono text-sm font-bold"
             dateTime={absoluteDate.toISOString()}
           >
             <h2 className="font-mono text-sm font-bold">{relativeDate}</h2>
@@ -67,10 +67,10 @@ export function Song() {
           <h2 className="font-mono text-sm font-bold">Currently listening</h2>
         )}
       </div>
-      <p className="font-semibold truncate text-md md:text-md text-neutral-800 dark:text-neutral-300">
+      <p className="text-md md:text-md truncate font-bold text-neutral-800 dark:text-neutral-300">
         {title}
       </p>
-      <p className="text-sm font-medium truncate md:text-md text-neutral-500 dark:text-neutral-400">
+      <p className="md:text-md truncate text-sm font-medium text-neutral-500 dark:text-neutral-400">
         {artist}
         {' — '}
         {album}
@@ -100,8 +100,8 @@ export function Film() {
   }, [absoluteDate]);
 
   return (
-    <div className="mt-8 leading-snug text-green-500 transition-all w-fit dark:text-green-400">
-      <div className="grid items-center grid-flow-col grid-rows-3 gap-x-4">
+    <div className="mt-8 w-fit leading-snug text-green-500 transition-all dark:text-green-400">
+      <div className="grid grid-flow-col grid-rows-3 items-center gap-x-4">
         <div className="relative row-span-3 aspect-[2/3] h-20 flex-none overflow-hidden rounded bg-neutral-200 duration-300 ease-in-out hover:-rotate-3 hover:scale-105 dark:bg-neutral-800">
           {poster && (
             <Image
@@ -130,17 +130,17 @@ export function Film() {
 
           {absoluteDate && (
             <time
-              className="font-mono text-sm font-semibold"
+              className="font-mono text-sm font-bold"
               dateTime={absoluteDate.toISOString()}
             >
               <h2 className="font-mono text-sm font-bold">{relativeDate}</h2>
             </time>
           )}
         </div>
-        <p className="font-semibold truncate text-md md:text-md text-neutral-800 dark:text-neutral-300">
+        <p className="text-md md:text-md truncate font-bold text-neutral-800 dark:text-neutral-300">
           {title}
         </p>
-        <p className="text-sm font-medium truncate md:text-md text-neutral-500 dark:text-neutral-400">
+        <p className="md:text-md truncate text-sm font-medium text-neutral-500 dark:text-neutral-400">
           {year}
         </p>
       </div>
@@ -152,7 +152,7 @@ export default function Activity() {
   return (
     <FadeIn delay={800} transitionDuration={800}>
       <div className="mt-16 leading-snug text-red-500 transition-all dark:text-red-400">
-        <h2 className="mt-10 text-lg font-semibold text-black dark:text-neutral-200">
+        <h2 className="mt-10 text-lg font-bold text-black dark:text-neutral-200">
           Activity
         </h2>
         <Song />
