@@ -28,8 +28,8 @@ export function Song() {
   }, [absoluteDate]);
 
   return (
-    <div className="mt-8 grid w-fit grid-flow-col grid-rows-3 items-center gap-x-4">
-      <div className="row-span-3 aspect-square h-20 overflow-hidden rounded bg-neutral-200 duration-300 ease-in-out hover:rotate-3 hover:scale-105 dark:bg-neutral-800">
+    <div className="grid items-center grid-flow-col grid-rows-3 mt-8 w-fit gap-x-4">
+      <div className="h-20 row-span-3 overflow-hidden duration-300 ease-in-out rounded aspect-square bg-neutral-200 hover:rotate-3 hover:scale-105 dark:bg-neutral-800">
         {cover && (
           <Image
             className="pointer-events-none"
@@ -41,13 +41,13 @@ export function Song() {
           />
         )}
       </div>
-      <div className="flex justify-start">
+      <div className="flex items-center justify-start">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className={cn(
             playing
-              ? 'mr-2 mt-[2px] h-4 w-4 flex-none animate-pulse'
-              : 'mr-2 mt-[2px] h-4 w-4 flex-none'
+              ? 'mr-2 h-4 w-4 flex-none animate-pulse'
+              : 'mr-2 h-4 w-4 flex-none'
           )}
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -67,10 +67,10 @@ export function Song() {
           <h2 className="font-mono text-sm font-bold">Currently listening</h2>
         )}
       </div>
-      <p className="text-md md:text-md truncate font-bold text-neutral-800 dark:text-neutral-300">
+      <p className="font-bold truncate text-md md:text-md text-neutral-800 dark:text-neutral-300">
         {title}
       </p>
-      <p className="md:text-md truncate text-sm font-medium text-neutral-500 dark:text-neutral-400">
+      <p className="text-sm font-medium truncate md:text-md text-neutral-500 dark:text-neutral-400">
         {artist}
         {' — '}
         {album}
@@ -100,8 +100,8 @@ export function Film() {
   }, [absoluteDate]);
 
   return (
-    <div className="mt-8 w-fit leading-snug text-green-500 transition-all dark:text-green-400">
-      <div className="grid grid-flow-col grid-rows-3 items-center gap-x-4">
+    <div className="mt-8 leading-snug text-green-500 transition-all w-fit dark:text-green-400">
+      <div className="grid items-center grid-flow-col grid-rows-3 gap-x-4">
         <div className="relative row-span-3 aspect-[2/3] h-20 flex-none overflow-hidden rounded bg-neutral-200 duration-300 ease-in-out hover:-rotate-3 hover:scale-105 dark:bg-neutral-800">
           {poster && (
             <Image
@@ -113,10 +113,10 @@ export function Film() {
             />
           )}
         </div>
-        <div className="flex justify-start">
+        <div className="flex items-center justify-start">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="mr-2 mt-[2.5px] h-4 w-4 flex-none"
+            className="flex-none w-4 h-4 mr-2"
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -137,10 +137,10 @@ export function Film() {
             </time>
           )}
         </div>
-        <p className="text-md md:text-md truncate font-bold text-neutral-800 dark:text-neutral-300">
+        <p className="font-bold truncate text-md md:text-md text-neutral-800 dark:text-neutral-300">
           {title}
         </p>
-        <p className="md:text-md truncate text-sm font-medium text-neutral-500 dark:text-neutral-400">
+        <p className="text-sm font-medium truncate md:text-md text-neutral-500 dark:text-neutral-400">
           {year}
         </p>
       </div>
