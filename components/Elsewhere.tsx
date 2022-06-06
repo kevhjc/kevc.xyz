@@ -7,9 +7,9 @@ export default function Elsewhere() {
         <h2 className="mt-10 text-lg font-semibold text-black dark:text-neutral-200">
           Elsewhere
         </h2>
-        <p className="mt-4 space-x-4 text-neutral-500 dark:text-neutral-300">
+        <p className="mt-4 space-x-4 font-mono text-[15px] text-neutral-500 dark:text-neutral-300">
           <a
-            className="font-medium underline transition duration-100 rounded-sm focusable decoration-neutral-500/30 decoration-2 underline-offset-2 hover:text-neutral-700 hover:decoration-neutral-700 focus:text-neutral-500 focus:ring-neutral-500/40 dark:text-neutral-200 dark:decoration-neutral-400 dark:hover:text-neutral-400 dark:hover:decoration-neutral-500/60 dark:focus:text-neutral-400 dark:focus:ring-neutral-400/40"
+            className="font-medium underline transition duration-100 rounded-sm decoration-neutral-500/30 decoration-2 underline-offset-4 hover:text-black hover:decoration-neutral-700 hover:decoration-wavy hover:decoration-1 dark:text-neutral-200 dark:decoration-neutral-400 dark:hover:text-neutral-400 dark:hover:decoration-neutral-500/60"
             href="https://github.com/kevhjc/"
             target="_blank"
             rel="noopener noreferrer"
@@ -17,7 +17,7 @@ export default function Elsewhere() {
             GitHub
           </a>
           <a
-            className="font-medium underline transition duration-100 rounded-sm focusable decoration-neutral-500/30 decoration-2 underline-offset-2 hover:text-neutral-700 hover:decoration-neutral-700 focus:text-neutral-500 focus:ring-neutral-500/40 dark:text-neutral-200 dark:decoration-neutral-400 dark:hover:text-neutral-400 dark:hover:decoration-neutral-500/60 dark:focus:text-neutral-400 dark:focus:ring-neutral-400/40"
+            className="font-medium underline transition duration-100 rounded-sm decoration-neutral-500/30 decoration-2 underline-offset-4 hover:text-black hover:decoration-neutral-700 hover:decoration-wavy hover:decoration-1 dark:text-neutral-200 dark:decoration-neutral-400 dark:hover:text-neutral-400 dark:hover:decoration-neutral-500/60"
             href="https://www.linkedin.com/in/kevc/"
             target="_blank"
             rel="noopener noreferrer"
@@ -25,7 +25,7 @@ export default function Elsewhere() {
             LinkedIn
           </a>
           <a
-            className="font-medium underline transition duration-100 rounded-sm focusable decoration-neutral-500/30 decoration-2 underline-offset-2 hover:text-neutral-700 hover:decoration-neutral-700 focus:text-neutral-500 focus:ring-neutral-500/40 dark:text-neutral-200 dark:decoration-neutral-400 dark:hover:text-neutral-400 dark:hover:decoration-neutral-500/60 dark:focus:text-neutral-400 dark:focus:ring-neutral-400/40"
+            className="font-medium underline transition duration-100 rounded-sm decoration-neutral-500/30 decoration-2 underline-offset-4 hover:text-black hover:decoration-neutral-700 hover:decoration-wavy hover:decoration-1 dark:text-neutral-200 dark:decoration-neutral-400 dark:hover:text-neutral-400 dark:hover:decoration-neutral-500/60"
             href="https://instagram.com/kevhjc/"
             target="_blank"
             rel="noopener noreferrer"
@@ -33,7 +33,7 @@ export default function Elsewhere() {
             Instagram
           </a>
           <a
-            className="font-medium underline transition duration-100 rounded-sm focusable decoration-neutral-500/30 decoration-2 underline-offset-2 hover:text-neutral-700 hover:decoration-neutral-700 focus:text-neutral-500 focus:ring-neutral-500/40 dark:text-neutral-200 dark:decoration-neutral-400 dark:hover:text-neutral-400 dark:hover:decoration-neutral-500/60 dark:focus:text-neutral-400 dark:focus:ring-neutral-400/40"
+            className="font-medium underline transition duration-100 rounded-sm decoration-neutral-500/30 decoration-2 underline-offset-4 hover:text-black hover:decoration-neutral-700 hover:decoration-wavy hover:decoration-1 dark:text-neutral-200 dark:decoration-neutral-400 dark:hover:text-neutral-400 dark:hover:decoration-neutral-500/60"
             href="https://read.cv/kevc/"
             target="_blank"
             rel="noopener noreferrer"

@@ -57,15 +57,17 @@ export function Song() {
 
         {absoluteDate && (
           <time
-            className="text-sm font-semibold"
+            className="font-mono text-sm font-semibold"
             dateTime={absoluteDate.toISOString()}
           >
-            <h2 className="text-sm font-bold">{relativeDate}</h2>
+            <h2 className="font-mono text-sm font-bold">{relativeDate}</h2>
           </time>
         )}
-        {playing && <h2 className="text-sm font-bold">Currently listening</h2>}
+        {playing && (
+          <h2 className="font-mono text-sm font-bold">Currently listening</h2>
+        )}
       </div>
-      <p className="text-sm font-semibold truncate md:text-md text-neutral-800 dark:text-neutral-300">
+      <p className="font-semibold truncate text-md md:text-md text-neutral-800 dark:text-neutral-300">
         {title}
       </p>
       <p className="text-sm font-medium truncate md:text-md text-neutral-500 dark:text-neutral-400">
@@ -128,14 +130,14 @@ export function Film() {
 
           {absoluteDate && (
             <time
-              className="text-sm font-semibold"
+              className="font-mono text-sm font-semibold"
               dateTime={absoluteDate.toISOString()}
             >
-              <h2 className="text-sm font-bold">{relativeDate}</h2>
+              <h2 className="font-mono text-sm font-bold">{relativeDate}</h2>
             </time>
           )}
         </div>
-        <p className="text-sm font-semibold truncate md:text-md text-neutral-800 dark:text-neutral-300">
+        <p className="font-semibold truncate text-md md:text-md text-neutral-800 dark:text-neutral-300">
           {title}
         </p>
         <p className="text-sm font-medium truncate md:text-md text-neutral-500 dark:text-neutral-400">

@@ -11,13 +11,13 @@ export default function Information() {
         <div className="flex">
           <div className="relative w-24 h-24 duration-500 ease-in-out hover:scale-105">
             <Image
+              className="rounded-full pointer-events-none dark:invert"
               priority={true}
-              className="rounded-full dark:invert"
               alt="Avatar"
               src="/avatar.png"
               layout="fill"
             />
-            <span className="absolute w-8 h-8 m-auto my-1 text-center rounded-full pointer-events-none z-2 -top-2 -right-1 animate-gradient bg-gradient-to-r from-emerald-400 via-sky-400 to-rose-400">
+            <span className="absolute w-8 h-8 m-auto my-1 text-center rounded-full pointer-events-none z-2 -top-2 -right-1 animate-gradient bg-gradient-to-r from-violet-400 via-emerald-400 to-rose-400">
               ✌️
             </span>
           </div>
