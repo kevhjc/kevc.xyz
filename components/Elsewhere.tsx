@@ -1,5 +1,7 @@
 import FadeIn from 'react-fade-in';
 
+import ElsewhereLink from './ElsewhereLink';
+
 export default function Elsewhere() {
   return (
     <FadeIn delay={500} transitionDuration={800}>
@@ -7,39 +9,17 @@ export default function Elsewhere() {
         <h2 className="mt-10 text-lg font-bold text-black dark:text-neutral-200">
           Elsewhere
         </h2>
-        <p className="mt-4 space-x-4 font-mono text-[15px] text-neutral-500 dark:text-neutral-300">
-          <a
-            className="font-medium underline transition duration-100 decoration-neutral-500/30 decoration-2 underline-offset-4 hover:text-black hover:decoration-neutral-700 hover:decoration-2 dark:text-neutral-200 dark:decoration-neutral-400 dark:hover:text-neutral-400 dark:hover:decoration-neutral-500/60"
-            href="https://github.com/kevhjc/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
-          <a
-            className="font-medium underline transition duration-100 decoration-neutral-500/30 decoration-2 underline-offset-4 hover:text-black hover:decoration-neutral-700 hover:decoration-2 dark:text-neutral-200 dark:decoration-neutral-400 dark:hover:text-neutral-400 dark:hover:decoration-neutral-500/60"
+        <p className="mt-4 space-x-4 font-mono text-[15px] text-neutral-600 dark:text-neutral-300">
+          <ElsewhereLink name="GitHub" href="https://github.com/kevhjc/" />
+          <ElsewhereLink
+            name="LinkedIn"
             href="https://www.linkedin.com/in/kevc/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
-          <a
-            className="font-medium underline transition duration-100 decoration-neutral-500/30 decoration-2 underline-offset-4 hover:text-black hover:decoration-neutral-700 hover:decoration-2 dark:text-neutral-200 dark:decoration-neutral-400 dark:hover:text-neutral-400 dark:hover:decoration-neutral-500/60"
+          />
+          <ElsewhereLink
+            name="Instagram"
             href="https://instagram.com/kevhjc/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Instagram
-          </a>
-          <a
-            className="font-medium underline transition duration-100 decoration-neutral-500/30 decoration-2 underline-offset-4 hover:text-black hover:decoration-neutral-700 hover:decoration-2 dark:text-neutral-200 dark:decoration-neutral-400 dark:hover:text-neutral-400 dark:hover:decoration-neutral-500/60"
-            href="https://read.cv/kevc/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Resumé
-          </a>
+          />
+          <ElsewhereLink name="Resumé" href="https://read.cv/kevc/" />
         </p>
       </div>
     </FadeIn>

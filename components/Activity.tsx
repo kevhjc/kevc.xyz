@@ -36,8 +36,8 @@ export function Song() {
             alt={title}
             src={cover}
             objectFit="cover"
-            width={200}
-            height={200}
+            width={80}
+            height={80}
           />
         )}
       </div>

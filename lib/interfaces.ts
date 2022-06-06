@@ -7,3 +7,8 @@ export interface ProjectProps {
   href: string;
   src: string;
 }
+
+export interface ElsewhereProps {
+  name: string;
+  href: string;
+}
