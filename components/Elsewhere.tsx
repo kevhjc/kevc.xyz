@@ -9,7 +9,7 @@ export default function Elsewhere() {
         <h2 className="mt-10 text-lg font-bold text-black dark:text-neutral-200">
           Elsewhere
         </h2>
-        <p className="mt-4 space-x-4 font-mono text-[15px] text-neutral-600 dark:text-neutral-300">
+        <p className="mt-4 space-x-4 text-neutral-600 dark:text-neutral-300">
           <ElsewhereLink name="GitHub" href="https://github.com/kevhjc/" />
           <ElsewhereLink
             name="LinkedIn"
