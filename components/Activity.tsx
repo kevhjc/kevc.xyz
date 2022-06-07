@@ -57,22 +57,24 @@ export function Song() {
 
         {absoluteDate && (
           <time
-            className="text-sm font-semibold"
+            className="font-mono text-xs font-semibold"
             dateTime={absoluteDate.toISOString()}
           >
-            <h2 className="text-sm font-bold">{relativeDate}</h2>
+            <h2 className="font-mono text-xs font-bold">{relativeDate}</h2>
           </time>
         )}
-        {playing && <h2 className="text-sm font-bold">Currently listening</h2>}
+        {playing && (
+          <h2 className="font-mono text-xs font-bold">Currently listening</h2>
+        )}
       </div>
-      <p className="text-sm font-semibold truncate md:text-md text-neutral-800 dark:text-neutral-300">
+      <span className="font-semibold truncate text-md text-neutral-800 dark:text-neutral-300">
         {title}
-      </p>
-      <p className="text-sm font-medium truncate md:text-md text-neutral-500 dark:text-neutral-400">
+      </span>
+      <span className="text-sm font-medium truncate md:text-md text-neutral-500 dark:text-neutral-400">
         {artist}
         {' — '}
         {album}
-      </p>
+      </span>
     </div>
   );
 }
@@ -98,50 +100,48 @@ export function Film() {
   }, [absoluteDate]);
 
   return (
-    <div className="mt-8 leading-snug text-green-500 transition-all w-fit dark:text-green-400">
-      <div className="grid items-center grid-flow-col grid-rows-3 gap-x-4">
-        <div className="relative row-span-3 aspect-[2/3] h-20 flex-none overflow-hidden rounded bg-neutral-200 duration-300 ease-in-out hover:-rotate-3 hover:scale-105 dark:bg-neutral-800">
-          {poster && (
-            <Image
-              className="pointer-events-none"
-              alt={title}
-              src={poster}
-              objectFit="cover"
-              layout="fill"
-            />
-          )}
-        </div>
-        <div className="flex items-center justify-start">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="flex-none w-4 h-4 mr-2"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-            <path
-              fillRule="evenodd"
-              d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
-              clipRule="evenodd"
-            />
-          </svg>
-
-          {absoluteDate && (
-            <time
-              className="text-sm font-semibold"
-              dateTime={absoluteDate.toISOString()}
-            >
-              <h2 className="text-sm font-bold">{relativeDate}</h2>
-            </time>
-          )}
-        </div>
-        <p className="text-sm font-semibold truncate md:text-md text-neutral-800 dark:text-neutral-300">
-          {title}
-        </p>
-        <p className="text-sm font-medium truncate md:text-md text-neutral-500 dark:text-neutral-400">
-          {year}
-        </p>
+    <div className="grid items-center grid-flow-col grid-rows-3 mt-8 text-green-500 transition-all w-fit gap-x-4 dark:text-green-400">
+      <div className="relative row-span-3 aspect-[2/3] h-20 flex-none overflow-hidden rounded bg-neutral-200 duration-300 ease-in-out hover:-rotate-3 hover:scale-105 dark:bg-neutral-800">
+        {poster && (
+          <Image
+            className="pointer-events-none"
+            alt={title}
+            src={poster}
+            objectFit="cover"
+            layout="fill"
+          />
+        )}
       </div>
+      <div className="flex items-center justify-start">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="flex-none w-4 h-4 mr-2"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+          <path
+            fillRule="evenodd"
+            d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+            clipRule="evenodd"
+          />
+        </svg>
+
+        {absoluteDate && (
+          <time
+            className="font-mono text-xs font-semibold"
+            dateTime={absoluteDate.toISOString()}
+          >
+            <h2 className="font-mono text-xs font-bold">{relativeDate}</h2>
+          </time>
+        )}
+      </div>
+      <span className="font-semibold truncate text-md text-neutral-800 dark:text-neutral-300">
+        {title}
+      </span>
+      <span className="text-sm font-medium truncate md:text-md text-neutral-500 dark:text-neutral-400">
+        {year}
+      </span>
     </div>
   );
 }
