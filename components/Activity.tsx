@@ -13,6 +13,8 @@ import { capitalize } from 'lib/utils';
 export function Song() {
   const { title, artist, album, date, cover, playing } = useLatestSong();
 
+  console.log(cover);
+
   const absoluteDate = useMemo(() => {
     if (!date) return;
 
@@ -28,11 +30,10 @@ export function Song() {
   }, [absoluteDate]);
 
   return (
-    <div className="grid items-center grid-flow-col grid-rows-3 mt-8 text-red-500 transition-all w-fit gap-x-4 dark:text-red-400">
+    <div className="grid items-center grid-flow-col grid-rows-3 mt-6 text-red-500 transition-all w-fit gap-x-4 dark:text-red-400">
       <div className="h-20 row-span-3 overflow-hidden duration-300 ease-in-out rounded aspect-square bg-neutral-200 hover:rotate-3 hover:scale-105 dark:bg-neutral-800">
         {cover && (
           <Image
-            className="pointer-events-none"
             alt={title}
             src={cover}
             objectFit="cover"
@@ -67,7 +68,7 @@ export function Song() {
           <h2 className="font-mono text-xs font-bold">Currently listening</h2>
         )}
       </div>
-      <span className="font-semibold truncate text-md text-neutral-800 dark:text-neutral-300">
+      <span className="font-semibold truncate text-md text-neutral-800 dark:text-neutral-200">
         {title}
       </span>
       <span className="text-sm font-medium truncate md:text-md text-neutral-500 dark:text-neutral-400">
@@ -100,16 +101,10 @@ export function Film() {
   }, [absoluteDate]);
 
   return (
-    <div className="grid items-center grid-flow-col grid-rows-3 mt-8 text-green-500 transition-all w-fit gap-x-4 dark:text-green-400">
-      <div className="relative row-span-3 aspect-[2/3] h-20 flex-none overflow-hidden rounded bg-neutral-200 duration-300 ease-in-out hover:-rotate-3 hover:scale-105 dark:bg-neutral-800">
+    <div className="grid items-center grid-flow-col grid-rows-3 mt-6 text-green-500 transition-all w-fit gap-x-4 dark:text-green-400">
+      <div className="relative row-span-3 aspect-[2/3] h-20 flex-none overflow-hidden rounded bg-neutral-200 duration-300 ease-in-out hover:rotate-3 hover:scale-105 dark:bg-neutral-800">
         {poster && (
-          <Image
-            className="pointer-events-none"
-            alt={title}
-            src={poster}
-            objectFit="cover"
-            layout="fill"
-          />
+          <Image alt={title} src={poster} objectFit="cover" layout="fill" />
         )}
       </div>
       <div className="flex items-center justify-start">
@@ -136,7 +131,7 @@ export function Film() {
           </time>
         )}
       </div>
-      <span className="font-semibold truncate text-md text-neutral-800 dark:text-neutral-300">
+      <span className="font-semibold truncate text-md text-neutral-800 dark:text-neutral-200">
         {title}
       </span>
       <span className="text-sm font-medium truncate md:text-md text-neutral-500 dark:text-neutral-400">
@@ -149,8 +144,8 @@ export function Film() {
 export default function Activity() {
   return (
     <FadeIn delay={800} transitionDuration={800}>
-      <div className="mt-16 leading-snug">
-        <h2 className="mt-10 text-lg font-semibold text-black dark:text-neutral-200">
+      <div className="mt-12 leading-snug">
+        <h2 className="text-lg font-semibold text-black dark:text-neutral-200">
           Activity
         </h2>
         <Song />

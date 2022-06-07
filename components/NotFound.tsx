@@ -9,7 +9,7 @@ export default function NotFound() {
           {' — Page not found'}
         </span>
       </h2>
-      <p className="mb-6 text-neutral-800 dark:text-neutral-300">
+      <p className="mb-6 text-neutral-800 dark:text-neutral-200">
         {`Looks like the page you're looking for doesn't exist.`}
       </p>
       <NextLink href="/">
