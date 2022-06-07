@@ -30,7 +30,7 @@ export function Song() {
   return (
     <div className="mt-8 leading-snug text-red-500 transition-all w-fit dark:text-red-400">
       <div className="grid items-center grid-flow-col grid-rows-3 gap-x-4">
-        <div className="h-20 row-span-3 overflow-hidden duration-300 ease-in-out rounded aspect-square bg-neutral-200 hover:rotate-3 hover:scale-105 dark:bg-neutral-800">
+        <div className="relative flex-none h-20 row-span-3 overflow-hidden duration-300 ease-in-out rounded aspect-square bg-neutral-200 hover:rotate-3 hover:scale-105 dark:bg-neutral-800">
           {cover && (
             <Image
               className="pointer-events-none"
@@ -68,14 +68,14 @@ export function Song() {
             <h2 className="font-mono text-sm font-bold">Currently listening</h2>
           )}
         </div>
-        <p className="font-bold truncate text-md md:text-md text-neutral-800 dark:text-neutral-300">
+        <span className="font-bold truncate text-md text-neutral-800 dark:text-neutral-300">
           {title}
-        </p>
-        <p className="text-sm font-medium truncate md:text-md text-neutral-500 dark:text-neutral-400">
+        </span>
+        <span className="text-sm font-medium truncate md:text-md text-neutral-500 dark:text-neutral-400">
           {artist}
           {' — '}
           {album}
-        </p>
+        </span>
       </div>
     </div>
   );
@@ -139,12 +139,12 @@ export function Film() {
             </time>
           )}
         </div>
-        <p className="font-bold truncate text-md md:text-md text-neutral-800 dark:text-neutral-300">
+        <span className="font-bold truncate text-md text-neutral-800 dark:text-neutral-300">
           {title}
-        </p>
-        <p className="text-sm font-medium truncate md:text-md text-neutral-500 dark:text-neutral-400">
+        </span>
+        <span className="text-sm font-medium truncate md:text-md text-neutral-500 dark:text-neutral-400">
           {year}
-        </p>
+        </span>
       </div>
     </div>
   );
