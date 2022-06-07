@@ -28,7 +28,7 @@ export function Song() {
   }, [absoluteDate]);
 
   return (
-    <div className="mt-8 leading-snug text-red-500 transition-all w-fit dark:text-red-400">
+    <div className="text-red-500 transition-all w-fit dark:text-red-400">
       <div className="grid items-center grid-flow-col grid-rows-3 gap-x-4">
         <div className="relative flex-none h-20 row-span-3 overflow-hidden duration-300 ease-in-out rounded aspect-square bg-neutral-200 hover:rotate-3 hover:scale-105 dark:bg-neutral-800">
           {cover && (
@@ -68,14 +68,14 @@ export function Song() {
             <h2 className="font-mono text-sm font-bold">Currently listening</h2>
           )}
         </div>
-        <span className="font-bold truncate text-md text-neutral-800 dark:text-neutral-300">
+        <div className="font-bold truncate text-md w-fit text-neutral-800 dark:text-neutral-300">
           {title}
-        </span>
-        <span className="text-sm font-medium truncate md:text-md text-neutral-500 dark:text-neutral-400">
+        </div>
+        <div className="text-sm font-medium truncate md:text-md w-fit text-neutral-500 dark:text-neutral-400">
           {artist}
           {' — '}
           {album}
-        </span>
+        </div>
       </div>
     </div>
   );
@@ -102,7 +102,7 @@ export function Film() {
   }, [absoluteDate]);
 
   return (
-    <div className="mt-8 leading-snug text-green-500 transition-all w-fit dark:text-green-400">
+    <div className="mt-8 text-green-500 transition-all w-fit dark:text-green-400">
       <div className="grid items-center grid-flow-col grid-rows-3 gap-x-4">
         <div className="relative row-span-3 aspect-[2/3] h-20 flex-none overflow-hidden rounded bg-neutral-200 duration-300 ease-in-out hover:-rotate-3 hover:scale-105 dark:bg-neutral-800">
           {poster && (
@@ -115,7 +115,7 @@ export function Film() {
             />
           )}
         </div>
-        <div className="flex items-center justify-start">
+        <div className="flex items-center justify-start w-fit">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="flex-none w-4 h-4 mr-2"
@@ -139,12 +139,12 @@ export function Film() {
             </time>
           )}
         </div>
-        <span className="font-bold truncate text-md text-neutral-800 dark:text-neutral-300">
+        <div className="font-bold truncate text-md w-fit text-neutral-800 dark:text-neutral-300">
           {title}
-        </span>
-        <span className="text-sm font-medium truncate md:text-md text-neutral-500 dark:text-neutral-400">
+        </div>
+        <div className="text-sm font-medium truncate md:text-md w-fit text-neutral-500 dark:text-neutral-400">
           {year}
-        </span>
+        </div>
       </div>
     </div>
   );
