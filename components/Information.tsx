@@ -27,7 +27,10 @@ export default function Information() {
         </h2>
         <div className="text-neutral-800 dark:text-neutral-200">
           Software engineer based in{' '}
-          <span className="font-serif text-lg italic">Los Angeles</span>.
+          <span className="font-serif text-lg italic">
+            Los Angeles, California
+          </span>
+          .
         </div>
         <div className="mt-6 text-neutral-800 dark:text-neutral-200">
           Prototyping React applications at <ProjectLink {...REACTRIX} />,
