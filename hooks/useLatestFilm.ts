@@ -1,8 +1,8 @@
 import useSWR from 'swr/immutable';
-import { Response } from '../pages/api/letterboxd';
+import { FilmResponse } from 'lib/interfaces';
 
-export function useLatestFilm(): Partial<Response> {
-  const { data } = useSWR<Response>('/api/letterboxd', {
+export function useLatestFilm(): Partial<FilmResponse> {
+  const { data } = useSWR<FilmResponse>('/api/letterboxd', {
     revalidateIfStale: true,
   });
 

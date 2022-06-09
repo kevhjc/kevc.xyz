@@ -13,8 +13,6 @@ import { capitalize } from 'lib/utils';
 export function Song() {
   const { title, artist, album, date, cover, playing } = useLatestSong();
 
-  console.log(cover);
-
   const absoluteDate = useMemo(() => {
     if (!date) return;
 
@@ -86,8 +84,9 @@ export function Film() {
   const absoluteDate = useMemo(() => {
     if (!date) return;
 
-    return new Date(date);
+    return new Date(`${date} 'PST'`);
   }, [date]);
+
   const relativeDate = useMemo(() => {
     if (!absoluteDate) return;
 
