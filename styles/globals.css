@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-neutral-100 font-sans text-neutral-900 dark:bg-neutral-900 dark:text-neutral-200;
+    @apply font-sans bg-neutral-100 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-200;
   }
 }
 
@@ -60,9 +60,4 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
-}
-
-::selection {
-  background-color: #e5e5e5;
-  color: rgb(23 23 23);
 }
