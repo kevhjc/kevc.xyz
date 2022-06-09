@@ -5,6 +5,7 @@ import cn from 'classnames';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 import isToday from 'date-fns/isToday';
 import isYesterday from 'date-fns/isYesterday';
+import format from 'date-fns/format';
 
 import { useLatestSong } from 'hooks/useLatestSong';
 import { useLatestFilm } from 'hooks/useLatestFilm';
@@ -55,12 +56,7 @@ export function Song() {
         </svg>
 
         {absoluteDate && (
-          <time
-            className="font-mono text-xs font-semibold"
-            dateTime={absoluteDate.toISOString()}
-          >
-            <h2 className="font-mono text-xs font-bold">{relativeDate}</h2>
-          </time>
+          <h2 className="font-mono text-xs font-bold">{relativeDate}</h2>
         )}
         {playing && (
           <h2 className="font-mono text-xs font-bold">Currently listening</h2>
@@ -84,7 +80,7 @@ export function Film() {
   const absoluteDate = useMemo(() => {
     if (!date) return;
 
-    return new Date(`${date} 'PST'`);
+    return new Date(`${date}T00:00:00`);
   }, [date]);
 
   const relativeDate = useMemo(() => {
@@ -122,12 +118,7 @@ export function Film() {
         </svg>
 
         {absoluteDate && (
-          <time
-            className="font-mono text-xs font-semibold"
-            dateTime={absoluteDate.toISOString()}
-          >
-            <h2 className="font-mono text-xs font-bold">{relativeDate}</h2>
-          </time>
+          <h2 className="font-mono text-xs font-bold">{relativeDate}</h2>
         )}
       </div>
       <span className="font-semibold truncate text-md text-neutral-800 dark:text-neutral-200">
