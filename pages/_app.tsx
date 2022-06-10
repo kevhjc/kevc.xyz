@@ -25,10 +25,13 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <ThemeProvider attribute="class">
         <Head>
           <title>{meta.title}</title>
-          <meta name="title" content={meta.title} />
+
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+
           <meta name="author" content={meta.title} />
           <meta name="description" content={meta.description} />
-          <meta name="viewport" content="initial-scale=1, viewport-fit=cover" />
+
           <meta name="robots" content="follow, index" />
         </Head>
         <Component {...pageProps} />
