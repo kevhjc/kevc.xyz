@@ -134,12 +134,12 @@ export function Film() {
 export default function Activity() {
   return (
     <FadeIn delay={800} transitionDuration={800}>
-      <div className="mt-12 leading-snug">
+      <div className="leading-snug mt-14">
         <h2 className="text-lg font-semibold text-black dark:text-neutral-200">
           Activity
         </h2>
         <Song />
-        <Film />
+        {/* <Film /> */}
       </div>
     </FadeIn>
   );
