@@ -8,7 +8,7 @@ export default function Home() {
     <Container>
       <Information />
       <Elsewhere />
-      <Activity />
+      {/* <Activity /> */}
     </Container>
   );
 }
