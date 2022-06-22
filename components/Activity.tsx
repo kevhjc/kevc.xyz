@@ -1,12 +1,10 @@
 import { useMemo } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import FadeIn from 'react-fade-in';
 import cn from 'classnames';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 import isToday from 'date-fns/isToday';
 import isYesterday from 'date-fns/isYesterday';
-import format from 'date-fns/format';
 
 import { useLatestSong } from 'hooks/useLatestSong';
 import { useLatestFilm } from 'hooks/useLatestFilm';
