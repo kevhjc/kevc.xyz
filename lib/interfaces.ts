@@ -75,6 +75,7 @@ export interface SongResponse {
   album: string;
   date?: number;
   cover: string;
+  url: string;
   playing: boolean;
 }
 

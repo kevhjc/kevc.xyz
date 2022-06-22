@@ -30,6 +30,7 @@ export async function getLatestSong(): Promise<SongResponse | undefined> {
       cover: song.image.find((image) => image.size === 'extralarge')?.[
         '#text'
       ] as string,
+      url: song.url,
       playing: Boolean(song['@attr']?.nowplaying) ?? !date,
     };
   } catch {

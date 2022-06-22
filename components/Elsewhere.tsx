@@ -15,11 +15,11 @@ export default function Elsewhere() {
             name="LinkedIn"
             href="https://www.linkedin.com/in/kevc/"
           />
+          <ElsewhereLink name="Resumé" href="https://read.cv/kevc/" />
           <ElsewhereLink
             name="Instagram"
             href="https://instagram.com/kevhjc/"
           />
-          <ElsewhereLink name="Resumé" href="https://read.cv/kevc/" />
         </p>
       </div>
     </FadeIn>

@@ -9,7 +9,7 @@ export default function Information() {
     <FadeIn delay={200} transitionDuration={800}>
       <div className="leading-loose">
         <div className="flex">
-          <div className="relative w-24 h-24 duration-500 ease-in-out hover:scale-105">
+          <div className="relative w-24 h-24">
             <Image
               className="rounded-full dark:invert"
               priority={true}

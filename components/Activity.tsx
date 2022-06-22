@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import FadeIn from 'react-fade-in';
 import cn from 'classnames';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
@@ -12,7 +13,9 @@ import { useLatestFilm } from 'hooks/useLatestFilm';
 import { capitalize } from 'lib/utils';
 
 export function Song() {
-  const { title, artist, album, date, cover, playing } = useLatestSong();
+  const { title, artist, album, date, cover, url, playing } = useLatestSong();
+
+  console.log(url);
 
   const absoluteDate = useMemo(() => {
     if (!date) return;
@@ -32,13 +35,15 @@ export function Song() {
     <div className="grid items-center grid-flow-col grid-rows-3 mt-6 text-red-500 transition-all w-fit gap-x-4 dark:text-red-400">
       <div className="h-20 row-span-3 overflow-hidden duration-300 ease-in-out rounded aspect-square bg-neutral-200 hover:scale-105 dark:bg-neutral-800">
         {cover && (
-          <Image
-            alt={title}
-            src={cover}
-            objectFit="cover"
-            width={200}
-            height={200}
-          />
+          <a href={url}>
+            <Image
+              alt={title}
+              src={cover}
+              objectFit="cover"
+              width={200}
+              height={200}
+            />
+          </a>
         )}
       </div>
       <div className="flex items-center justify-start">
