@@ -9,11 +9,10 @@ import isYesterday from 'date-fns/isYesterday';
 import { useLatestSong } from 'hooks/useLatestSong';
 import { useLatestFilm } from 'hooks/useLatestFilm';
 import { capitalize } from 'lib/utils';
+import Skeleton from './Skeleton';
 
 export function Song() {
   const { title, artist, album, date, cover, url, playing } = useLatestSong();
-
-  console.log(url);
 
   const absoluteDate = useMemo(() => {
     if (!date) return;
@@ -65,14 +64,20 @@ export function Song() {
           <h2 className="font-mono text-xs font-bold">Currently listening</h2>
         )}
       </div>
-      <span className="font-semibold truncate text-md text-neutral-800 dark:text-neutral-200">
-        {title}
-      </span>
-      <span className="text-sm font-medium truncate md:text-md text-neutral-500 dark:text-neutral-400">
-        {artist}
-        {' — '}
-        {album}
-      </span>
+      {title ? (
+        <span className="font-semibold truncate text-md text-neutral-800 dark:text-neutral-200">
+          {title}
+        </span>
+      ) : (
+        <Skeleton className="w-36" />
+      )}
+      {artist ? (
+        <span className="text-sm font-medium truncate md:text-md text-neutral-500 dark:text-neutral-400">
+          {`${artist} — ${album}`}
+        </span>
+      ) : (
+        <Skeleton className="w-28" />
+      )}
     </div>
   );
 }
