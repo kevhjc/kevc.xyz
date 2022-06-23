@@ -65,7 +65,7 @@ export function Song() {
           )}
         </div>
       ) : (
-        <Skeleton className="w-36" />
+        <Skeleton className="w-40" />
       )}
       {title ? (
         <span className="font-semibold truncate text-md text-neutral-800 dark:text-neutral-200">
@@ -145,8 +145,8 @@ export function Film() {
 export default function Activity() {
   return (
     <FadeIn delay={800} transitionDuration={800}>
-      <div className="leading-snug mt-14">
-        <h2 className="text-lg font-semibold text-black dark:text-neutral-200">
+      <div className="leading-snug">
+        <h2 className="mt-12 text-lg font-semibold text-black dark:text-neutral-200">
           Activity
         </h2>
         <Song />

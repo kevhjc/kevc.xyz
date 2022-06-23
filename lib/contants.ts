@@ -15,9 +15,3 @@ export const BOOKMARKR = {
   href: 'https://www.bookmarkr.link/',
   src: '/bookmarkr.png',
 };
-
-export const VAVLT = {
-  name: 'Vavlt',
-  href: 'https://vavlt.vercel.app/',
-  src: '/vavlt.png',
-};
