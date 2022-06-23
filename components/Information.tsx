@@ -27,7 +27,9 @@ export default function Information() {
             </span>
           </div>
         </div>
-        <h2 className="mt-5 text-lg font-semibold text-black dark:text-neutral-200"></h2>
+        <h2 className="mt-5 text-lg font-semibold text-black dark:text-neutral-200">
+          Kevin H. Chung
+        </h2>
         <div className="mt-3 text-neutral-800 dark:text-neutral-200">
           Software engineer based in{' '}
           <span className="font-serif text-lg italic">
