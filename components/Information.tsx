@@ -15,7 +15,6 @@ export default function Information() {
               <a>
                 <Image
                   className="rounded-full dark:invert"
-                  priority={true}
                   alt="Avatar"
                   src="/avatar.png"
                   layout="fill"
