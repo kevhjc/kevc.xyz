@@ -6,7 +6,7 @@ export default function Container(props: ContainerProps) {
   const { children } = props;
 
   return (
-    <div className="flex items-center justify-center max-w-xl p-10 mx-auto md:pt-28">
+    <div className="mx-auto flex max-w-[600px] items-center justify-center p-10 md:pt-28">
       <main>{children}</main>
     </div>
   );
