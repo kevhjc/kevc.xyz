@@ -4,7 +4,7 @@ import ElsewhereLink from './ElsewhereLink';
 
 export default function Elsewhere() {
   return (
-    <FadeIn delay={500} transitionDuration={800}>
+    <FadeIn delay={400} transitionDuration={800}>
       <div className="leading-loose">
         <h2 className="mt-6 font-medium text-black md:mt-12 dark:text-neutral-200">
           Elsewhere
