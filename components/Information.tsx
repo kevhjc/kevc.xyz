@@ -29,7 +29,7 @@ export default function Information() {
             Software engineer based in Los Angeles, California.
           </div>
         </div>
-        <div className="mt-8 text-neutral-800 dark:text-neutral-200">
+        <div className="mt-2 text-neutral-800 md:mt-12 dark:text-neutral-200">
           Prototyping React applications at <ProjectLink {...REACTRIX} />,
           saving thoughts &#38; ideas at <ProjectLink {...CLEMENTINE} />, and
           collecting links at <ProjectLink {...BOOKMARKR} />.
