@@ -26,12 +26,12 @@ export default function Information() {
             <h2 className="font-black text-black dark:text-neutral-200">
               Kevin H. Chung
             </h2>
-            Software engineer based in Los Angeles, California.
+            Software engineer based in Los Angeles, CA.
           </div>
         </div>
         <div className="mt-2 text-neutral-800 md:mt-12 dark:text-neutral-200">
-          Prototyping React applications at <ProjectLink {...REACTRIX} />,
-          saving thoughts &#38; ideas at <ProjectLink {...CLEMENTINE} />, and
+          Prototyping applications at <ProjectLink {...REACTRIX} />, saving
+          thoughts &#38; ideas at <ProjectLink {...CLEMENTINE} />, and
           collecting links at <ProjectLink {...BOOKMARKR} />.
         </div>
       </div>
