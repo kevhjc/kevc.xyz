@@ -30,10 +30,9 @@ export default function Information() {
           </div>
         </div>
         <div className="mt-8 text-neutral-800 dark:text-neutral-200">
-          Currently prototyping React applications at{' '}
-          <ProjectLink {...REACTRIX} />, saving thoughts &#38; ideas at{' '}
-          <ProjectLink {...CLEMENTINE} />, and collecting links at{' '}
-          <ProjectLink {...BOOKMARKR} />.
+          Prototyping React applications at <ProjectLink {...REACTRIX} />,
+          saving thoughts &#38; ideas at <ProjectLink {...CLEMENTINE} />, and
+          collecting links at <ProjectLink {...BOOKMARKR} />.
         </div>
       </div>
     </FadeIn>
