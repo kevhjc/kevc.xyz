@@ -6,7 +6,7 @@ export default function Elsewhere() {
   return (
     <FadeIn delay={400} transitionDuration={800}>
       <div className="leading-loose">
-        <h2 className="mt-6 font-medium text-black md:mt-12 dark:text-neutral-200">
+        <h2 className="mt-12 font-medium text-black dark:text-neutral-200">
           Elsewhere
         </h2>
         <p className="mt-2 space-x-4">

@@ -30,7 +30,7 @@ export default function Music() {
   return (
     <FadeIn delay={800} transitionDuration={800}>
       <div className="leading-snug">
-        <h2 className="mt-8 font-medium text-black md:mt-14 dark:text-neutral-200">
+        <h2 className="font-medium text-black mt-14 dark:text-neutral-200">
           Music
         </h2>
         <div className="grid items-center grid-flow-col grid-rows-3 mt-4 text-red-500 transition-all w-fit gap-x-4 dark:text-red-400">
