@@ -10,7 +10,7 @@ export interface ProjectProps {
   src: string;
 }
 
-export interface ElsewhereProps {
+export interface StandardLinkProps {
   name: string;
   href: string;
 }
@@ -77,40 +77,4 @@ export interface SongResponse {
   cover: string;
   url: string;
   playing: boolean;
-}
-
-// Letterboxd
-
-export interface XMLParserDocument<T> {
-  rss: T;
-}
-
-export interface FilmEntry {
-  description: string;
-  guid: string;
-  'letterboxd:filmTitle': string;
-  'letterboxd:filmYear': number;
-  'letterboxd:memberRating': number;
-  'letterboxd:rewatch': 'No' | 'Yes';
-  'letterboxd:watchedDate': string;
-  link: string;
-  title: string;
-}
-
-export interface LetterboxdResponse {
-  channel: {
-    description: string;
-    item: FilmEntry[];
-    link: string;
-    title: string;
-  };
-}
-
-export interface FilmResponse {
-  date: string;
-  poster: string;
-  rating?: number;
-  title: string;
-  url: string;
-  year: number;
 }

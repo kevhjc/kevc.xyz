@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import FadeIn from 'react-fade-in';
 
 import { REACTRIX, CLEMENTINE, BOOKMARKR } from 'lib/contants';
 import ProjectLink from './ProjectLink';
+import StandardLink from './StandardLink';
 
 export default function Information() {
   return (
@@ -33,6 +33,14 @@ export default function Information() {
           Prototyping applications at <ProjectLink {...REACTRIX} />, saving
           thoughts &#38; ideas at <ProjectLink {...CLEMENTINE} />, and
           collecting links at <ProjectLink {...BOOKMARKR} />.
+        </div>
+        <div className="mt-6 text-neutral-800 dark:text-neutral-200">
+          Building ideas and experimenting with new tools &#38; libraries in the{' '}
+          <StandardLink
+            name="open"
+            href="https://github.com/kevhjc?tab=repositories"
+          />
+          .
         </div>
       </div>
     </FadeIn>
