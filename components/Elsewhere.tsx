@@ -10,12 +10,13 @@ export default function Elsewhere() {
           Elsewhere
         </h2>
         <p className="mt-2 space-x-6">
-          <StandardLink name="GitHub" href="https://github.com/kevhjc/" />
+          <StandardLink name="GitHub" href="https://github.com/kevhjc" />
           <StandardLink
             name="LinkedIn"
-            href="https://www.linkedin.com/in/kevc/"
+            href="https://www.linkedin.com/in/kevc"
           />
-          <StandardLink name="Instagram" href="https://instagram.com/kevhjc/" />
+          <StandardLink name="Instagram" href="https://instagram.com/kevhjc" />
+          <StandardLink name="Resume" href="https://read.cv/kevc" />
         </p>
       </div>
     </FadeIn>
