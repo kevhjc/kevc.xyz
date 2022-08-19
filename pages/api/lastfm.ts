@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { LastFmResponse, SongResponse } from '../../lib/interfaces';
 
 const LASTFM_API = 'https://ws.audioscrobbler.com/2.0/';
 const LASTFM_USERNAME = 'kevhjc';
@@ -6,8 +7,6 @@ const LASTFM_ENDPOINT = `${LASTFM_API}?method=user.getrecenttracks&user=${LASTFM
 
 export const STALE_DURATION = 60;
 export const FRESH_DURATION = STALE_DURATION / 2;
-
-import { LastFmResponse, SongResponse } from '../../lib/interfaces';
 
 export async function getLatestSong(): Promise<SongResponse | undefined> {
   try {
