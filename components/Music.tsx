@@ -33,7 +33,7 @@ export default function Music() {
           Music
         </h2>
         <div className="grid items-center grid-flow-col grid-rows-3 mt-4 text-red-500 transition-all w-fit gap-x-4 dark:text-red-400">
-          <div className="w-16 h-16 row-span-3 overflow-hidden duration-300 ease-in-out rounded aspect-square bg-neutral-200 hover:scale-105 dark:bg-neutral-800">
+          <div className="w-16 h-16 row-span-3 overflow-hidden duration-300 ease-in-out aspect-square bg-neutral-200 hover:scale-105 dark:bg-neutral-800">
             {cover && (
               <a href={url} rel="noopener noreferrer" target="_blank">
                 <Image
