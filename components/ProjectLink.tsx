@@ -15,7 +15,7 @@ export default function ProjectLink({ name, href, src }: ProjectProps) {
           <a
             className={cn(
               name === 'Reactrix'
-                ? 'font-medium underline decoration-rose-500 decoration-2 underline-offset-4 transition duration-100 hover:text-rose-500 hover:decoration-rose-500/30 focus:text-rose-500 focus:ring-rose-500/40 dark:text-white dark:decoration-rose-400 dark:hover:text-rose-400 dark:hover:decoration-rose-400/30 dark:focus:text-rose-400 dark:focus:ring-rose-400/40'
+                ? 'font-medium underline decoration-violet-500 decoration-2 underline-offset-4 transition duration-100 hover:text-violet-500 hover:decoration-violet-500/30 focus:text-violet-500 focus:ring-violet-500/40 dark:text-white dark:decoration-violet-400 dark:hover:text-violet-400 dark:hover:decoration-violet-400/30 dark:focus:text-violet-400 dark:focus:ring-violet-400/40'
                 : name === 'Clementine'
                 ? 'rounded-sm font-medium underline decoration-amber-500 decoration-2 underline-offset-4 transition duration-100 hover:text-amber-500 hover:decoration-amber-500/30 focus:text-amber-500 focus:ring-amber-500/40 dark:text-white dark:decoration-amber-400 dark:hover:text-amber-400 dark:hover:decoration-amber-400/30 dark:focus:text-amber-400 dark:focus:ring-amber-400/40'
                 : name === 'Bookmarkr'
