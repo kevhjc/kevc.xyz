@@ -12,7 +12,7 @@ export default function Information() {
         <div className="grid items-center grid-rows-2 duration-300 ease-in-out md:grid-cols-4 md:grid-rows-1">
           <div className="relative w-24 h-24 col-span-1">
             <Image
-              className="rounded-full dark:invert"
+              className="rounded-full"
               alt="Avatar"
               src="/avatar.png"
               width={200}
@@ -35,12 +35,8 @@ export default function Information() {
           collecting links at <ProjectLink {...BOOKMARKR} />.
         </div>
         <div className="mt-6 text-neutral-800 dark:text-neutral-200">
-          Building ideas and experimenting with new tools &#38; libraries in the{' '}
-          <StandardLink
-            name="open"
-            href="https://github.com/kevhjc?tab=repositories"
-          />
-          .
+          Building ideas and experimenting with new tools &#38; libraries in the
+          open.
         </div>
       </div>
     </FadeIn>
