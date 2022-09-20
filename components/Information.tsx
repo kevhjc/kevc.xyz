@@ -3,7 +3,6 @@ import FadeIn from 'react-fade-in';
 
 import { REACTRIX, CLEMENTINE, BOOKMARKR } from 'lib/contants';
 import ProjectLink from './ProjectLink';
-import StandardLink from './StandardLink';
 
 export default function Information() {
   return (
