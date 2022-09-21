@@ -25,17 +25,22 @@ export default function Information() {
             <h2 className="font-black text-black dark:text-neutral-200">
               Kevin H. Chung
             </h2>
-            Software engineer based in Los Angeles, CA.
+            {'Software engineer based in Los Angeles, CA.'}
           </div>
         </div>
         <div className="mt-2 text-neutral-800 md:mt-12 dark:text-neutral-200">
-          Prototyping applications at <ProjectLink {...REACTRIX} />, saving
-          thoughts &#38; ideas at <ProjectLink {...CLEMENTINE} />, and
-          collecting links at <ProjectLink {...BOOKMARKR} />.
+          {'Currently prototyping applications at '}
+          <ProjectLink {...REACTRIX} />
+          {', saving thoughts & ideas at '}
+          <ProjectLink {...CLEMENTINE} />
+          {', and collecting links at '}
+          <ProjectLink {...BOOKMARKR} />
+          {'.'}
         </div>
         <div className="mt-6 text-neutral-800 dark:text-neutral-200">
-          Building ideas and experimenting with new tools &#38; libraries in the
-          open.
+          {
+            'Building ideas and experimenting with new tools & libraries in the open.'
+          }
         </div>
       </div>
     </FadeIn>

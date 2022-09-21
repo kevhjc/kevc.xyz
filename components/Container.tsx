@@ -4,7 +4,7 @@ export default function Container(props: ContainerProps) {
   const { children } = props;
 
   return (
-    <div className="mx-auto flex w-fit max-w-[660px] items-center justify-center p-8 md:pt-28">
+    <div className="flex flex-wrap items-center justify-center max-w-2xl p-10 mx-auto break-words w-fit md:pt-28">
       <main>{children}</main>
     </div>
   );
