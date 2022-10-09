@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply font-sans text-lg bg-neutral-100 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-200;
+    @apply font-sans text-sm bg-neutral-100 text-neutral-900 sm:text-lg dark:bg-neutral-900 dark:text-neutral-200;
   }
 }
 
