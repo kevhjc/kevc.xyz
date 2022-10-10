@@ -19,10 +19,10 @@ export default function Information() {
           </span>
         </div>
         <div className="grid col-span-3 pt-2 md:pt-0">
-          <h2 className="font-bold text-black dark:text-neutral-200">
+          <h2 className="font-bold text-neutral-800 dark:text-neutral-200">
             Kevin H. Chung
           </h2>
-          {'Software engineer based in Los Angeles, CA.'}
+          <span>Software engineer based in Los Angeles, CA.</span>
         </div>
       </div>
       <div className="mt-2 text-neutral-800 md:mt-12 dark:text-neutral-200">
