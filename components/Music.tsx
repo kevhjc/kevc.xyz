@@ -26,7 +26,7 @@ export default function Music() {
 
   return (
     <div className="mb-8 leading-snug mt-14">
-      <h2 className="font-medium text-black dark:text-neutral-200">Music</h2>
+      <h2 className="text-black dark:text-neutral-200">Music</h2>
       <div className="grid items-center grid-flow-col grid-rows-3 mt-4 transition-all w-fit gap-x-4">
         <div className="w-16 h-16 row-span-3 overflow-hidden duration-300 ease-in-out rounded-sm aspect-square bg-neutral-200 hover:scale-105 dark:bg-neutral-800">
           {cover && (
@@ -68,14 +68,14 @@ export default function Music() {
           <Skeleton className="w-40" />
         )}
         {title ? (
-          <span className="font-semibold truncate text-md text-neutral-800 dark:text-neutral-200">
+          <span className="truncate text-md text-neutral-800 dark:text-neutral-200">
             {title}
           </span>
         ) : (
           <Skeleton className="w-28" />
         )}
         {artist ? (
-          <span className="text-sm font-medium truncate md:text-md text-neutral-500 dark:text-neutral-400">
+          <span className="text-sm truncate md:text-md text-neutral-500 dark:text-neutral-400">
             {`${artist} — ${album}`}
           </span>
         ) : (
