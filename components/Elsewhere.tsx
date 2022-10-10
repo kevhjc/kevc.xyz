@@ -7,7 +7,7 @@ export default function Elsewhere() {
       <h2 className="mt-12 font-medium text-black dark:text-neutral-200">
         Elsewhere
       </h2>
-      <div className="flex mt-2 space-x-2 sm:space-x-6">
+      <div className="flex flex-wrap gap-4 mt-2">
         <StandardLink {...GITHUB} />
         <StandardLink {...LINKEDIN} />
         <StandardLink {...INSTAGRAM} />
