@@ -25,7 +25,7 @@ export default function Music() {
   }, [absoluteDate]);
 
   return (
-    <div className="leading-snug mt-14">
+    <div className="mb-8 leading-snug mt-14">
       <h2 className="font-medium text-black dark:text-neutral-200">Music</h2>
       <div className="grid items-center grid-flow-col grid-rows-3 mt-4 transition-all w-fit gap-x-4">
         <div className="w-16 h-16 row-span-3 overflow-hidden duration-300 ease-in-out rounded-sm aspect-square bg-neutral-200 hover:scale-105 dark:bg-neutral-800">
