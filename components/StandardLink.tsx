@@ -1,14 +1,21 @@
 import { StandardLinkProps } from 'lib/interfaces';
 
-export default function StandardLink({ name, href }: StandardLinkProps) {
+export default function StandardLink({
+  name,
+  href,
+  icon: Icon,
+}: StandardLinkProps) {
   return (
     <a
-      className="font-medium underline transition duration-100 text-neutral-600 decoration-neutral-300 decoration-2 underline-offset-4 hover:text-black hover:decoration-neutral-700 dark:text-neutral-200 dark:decoration-neutral-400 dark:hover:text-neutral-400 dark:hover:decoration-neutral-600"
+      className="flex items-center justify-center px-2 font-medium transition duration-100 rounded-md w-fit bg-neutral-200 text-neutral-600 hover:bg-neutral-300 hover:text-black dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:hover:text-white"
       href={href}
       target="_blank"
       rel="noopener noreferrer"
     >
-      {name}
+      <span className="flex items-center gap-2">
+        <Icon />
+        {name}
+      </span>
     </a>
   );
 }

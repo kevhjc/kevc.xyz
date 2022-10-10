@@ -13,6 +13,7 @@ export interface ProjectProps {
 export interface StandardLinkProps {
   name: string;
   href: string;
+  icon: any;
 }
 
 // Last.fm
