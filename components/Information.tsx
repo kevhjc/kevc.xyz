@@ -1,5 +1,4 @@
 import Image from 'next/image';
-
 import { REACTRIX, CLEMENTINE, BOOKMARKR } from 'lib/contants';
 import ProjectLink from './ProjectLink';
 

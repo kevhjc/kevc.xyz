@@ -2,7 +2,7 @@ import {
   GitHubIcon,
   LinkedInIcon,
   InstagramIcon,
-  FileTextIcon,
+  ReaderIcon,
 } from 'components/Icons';
 
 export const REACTRIX = {
@@ -44,5 +44,5 @@ export const INSTAGRAM = {
 export const READCV = {
   name: 'Resume',
   href: 'https://read.cv/kevc',
-  icon: FileTextIcon,
+  icon: ReaderIcon,
 };
