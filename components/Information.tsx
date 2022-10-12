@@ -5,7 +5,7 @@ import ProjectLink from './ProjectLink';
 export default function Information() {
   return (
     <div className="leading-loose">
-      <div className="grid items-center grid-rows-2 duration-300 ease-in-out md:grid-cols-4 md:grid-rows-1">
+      <div className="grid items-center grid-rows-2 duration-300 ease-in-out sm:grid-cols-4 sm:grid-rows-1">
         <div className="relative w-24 h-24 col-span-1">
           <Image
             className="rounded-full"
@@ -18,14 +18,14 @@ export default function Information() {
             ✌️
           </span>
         </div>
-        <div className="grid col-span-3 pt-2 md:pt-0">
+        <div className="grid col-span-3 pt-2 sm:pt-0">
           <h2 className="font-bold text-neutral-800 dark:text-neutral-200">
             Kevin H. Chung
           </h2>
           <span>Software engineer based in Los Angeles, CA.</span>
         </div>
       </div>
-      <div className="mt-2 text-neutral-800 md:mt-12 dark:text-neutral-200">
+      <div className="mt-2 text-neutral-800 sm:mt-12 dark:text-neutral-200">
         {'Currently prototyping applications at '}
         <ProjectLink {...REACTRIX} />
         {', saving thoughts & ideas at '}

@@ -14,14 +14,13 @@ export default function ProjectLink({ name, href, src }: ProjectProps) {
           <a
             className={cn(
               name === 'Reactrix'
-                ? 'font-bold underline decoration-rose-500 decoration-2 underline-offset-4 transition duration-100 hover:text-rose-500 hover:decoration-rose-500/30 focus:text-rose-500 focus:ring-rose-500/40 dark:text-white dark:decoration-rose-400 dark:hover:text-rose-400 dark:hover:decoration-rose-400/30 dark:focus:text-rose-400 dark:focus:ring-rose-400/40'
+                ? 'decoration-rose-500 hover:text-rose-500 hover:decoration-rose-500/30 focus:text-rose-500 focus:ring-rose-500/40 dark:decoration-rose-400 dark:hover:text-rose-400 dark:hover:decoration-rose-400/30 dark:focus:text-rose-400 dark:focus:ring-rose-400/40'
                 : name === 'Clementine'
-                ? 'rounded-sm font-bold underline decoration-amber-500 decoration-2 underline-offset-4 transition duration-100 hover:text-amber-500 hover:decoration-amber-500/30 focus:text-amber-500 focus:ring-amber-500/40 dark:text-white dark:decoration-amber-400 dark:hover:text-amber-400 dark:hover:decoration-amber-400/30 dark:focus:text-amber-400 dark:focus:ring-amber-400/40'
+                ? 'decoration-amber-500 hover:text-amber-500 hover:decoration-amber-500/30 focus:text-amber-500 focus:ring-amber-500/40 dark:decoration-amber-400 dark:hover:text-amber-400 dark:hover:decoration-amber-400/30 dark:focus:text-amber-400 dark:focus:ring-amber-400/40'
                 : name === 'Bookmarkr'
-                ? 'rounded-sm font-bold underline decoration-blue-500 decoration-2 underline-offset-4 transition duration-100 hover:text-blue-500 hover:decoration-blue-500/30 focus:text-blue-500 focus:ring-blue-500/40 dark:text-white dark:decoration-blue-400 dark:hover:text-blue-400 dark:hover:decoration-blue-400/30 dark:focus:text-blue-400 dark:focus:ring-blue-400/40'
-                : name === 'Vavlt'
-                ? 'rounded-sm font-bold underline decoration-rose-500 decoration-2 underline-offset-4 transition duration-100 hover:text-rose-500 hover:decoration-rose-500/30 focus:text-rose-500 focus:ring-rose-500/40 dark:text-white dark:decoration-rose-400 dark:hover:text-rose-400 dark:hover:decoration-rose-400/30 dark:focus:text-rose-400 dark:focus:ring-rose-400/40'
-                : ''
+                ? 'decoration-blue-500 hover:text-blue-500 hover:decoration-blue-500/30 focus:text-blue-500 focus:ring-blue-500/40 dark:decoration-blue-400 dark:hover:text-blue-400 dark:hover:decoration-blue-400/30 dark:focus:text-blue-400 dark:focus:ring-blue-400/40'
+                : '',
+              'font-bold underline decoration-2 underline-offset-4 transition duration-100'
             )}
             href={href}
             rel="noopener noreferrer"

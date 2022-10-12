@@ -42,7 +42,7 @@ export const INSTAGRAM = {
 };
 
 export const READCV = {
-  name: 'Resume',
+  name: 'Read.cv',
   href: 'https://read.cv/kevc',
   icon: ReaderIcon,
 };

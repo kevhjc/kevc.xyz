@@ -65,21 +65,21 @@ export default function Music() {
             )}
           </div>
         ) : (
-          <Skeleton className="w-40" />
+          <Skeleton className="h-[0.75rem] w-40" />
         )}
         {title ? (
           <span className="truncate text-md text-neutral-800 dark:text-neutral-200">
             {title}
           </span>
         ) : (
-          <Skeleton className="w-28" />
+          <Skeleton className="h-[1rem] w-28" />
         )}
         {artist ? (
           <span className="text-sm truncate md:text-md text-neutral-500 dark:text-neutral-400">
-            {`${artist} — ${album}`}
+            {artist}
           </span>
         ) : (
-          <Skeleton className="w-28" />
+          <Skeleton className="h-[1rem] w-28" />
         )}
       </div>
     </div>
