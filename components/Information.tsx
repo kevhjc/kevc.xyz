@@ -14,7 +14,7 @@ export default function Information() {
             width={200}
             height={200}
           />
-          <span className="absolute flex items-center justify-center w-8 h-8 m-auto text-center rounded-full pointer-events-none z-2 -top-1 -right-1 animate-gradient bg-gradient-to-r from-violet-400 via-emerald-400 to-rose-400">
+          <span className="absolute flex items-center justify-center w-8 h-8 m-auto text-center rounded-full pointer-events-none z-2 -top-1 -right-1 animate-gradient bg-gradient-to-tr from-lime-400 via-sky-400 to-rose-400">
             ✌️
           </span>
         </div>

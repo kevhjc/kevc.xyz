@@ -18,17 +18,17 @@ module.exports = {
         dark: { raw: '(prefers-color-scheme: dark)' },
       },
       animation: {
-        gradient: 'gradient-xy 15s ease infinite',
+        gradient: 'gradient-xy 8s ease infinite',
       },
       keyframes: {
         'gradient-xy': {
           '0%, 100%': {
-            'background-size': '400% 400%',
-            'background-position': 'right center',
+            'background-size': '500% 500%',
+            'background-position': 'top',
           },
           '50%': {
-            'background-size': '400% 400%',
-            'background-position': 'left center',
+            'background-size': '500% 500%',
+            'background-position': 'bottom',
           },
         },
       },
