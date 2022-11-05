@@ -36,7 +36,7 @@ module.exports = {
     fontFamily: {
       sans: ['Satoshi', 'sans-serif'],
       serif: ['IBM Plex Serif', 'serif'],
-      mono: ['JetBrains Mono', 'monospace'],
+      mono: ['JetBrains Mono', 'Menlo', 'monospace'],
     },
   },
   plugins: [],

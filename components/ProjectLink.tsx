@@ -12,16 +12,7 @@ export default function ProjectLink({ name, href, src }: ProjectProps) {
       {() => (
         <>
           <a
-            className={cn(
-              name === 'Reactrix'
-                ? 'decoration-rose-500 hover:text-rose-500 hover:decoration-rose-500/30 focus:text-rose-500 focus:ring-rose-500 dark:decoration-rose-400 dark:hover:text-rose-400 dark:hover:decoration-rose-400/30 dark:focus:text-rose-400 dark:focus:ring-rose-400/40'
-                : name === 'Clementine'
-                ? 'decoration-amber-500 hover:text-amber-500 hover:decoration-amber-500/30 focus:text-amber-500 focus:ring-amber-500 dark:decoration-amber-400 dark:hover:text-amber-400 dark:hover:decoration-amber-400/30 dark:focus:text-amber-400 dark:focus:ring-amber-400/40'
-                : name === 'Bookmarkr'
-                ? 'decoration-blue-500 hover:text-blue-500 hover:decoration-blue-500/30 focus:text-blue-500 focus:ring-blue-500 dark:decoration-blue-400 dark:hover:text-blue-400 dark:hover:decoration-blue-400/30 dark:focus:text-blue-400 dark:focus:ring-blue-400/40'
-                : '',
-              'underline decoration-2 underline-offset-2 transition duration-100'
-            )}
+            className="underline decoration-neutral-400 decoration-1 underline-offset-2 transition duration-100 hover:decoration-neutral-600 focus:text-neutral-500 focus:ring-neutral-500 dark:decoration-neutral-500 dark:hover:decoration-neutral-300 dark:focus:text-neutral-400 dark:focus:ring-neutral-400/40"
             href={href}
             rel="noopener noreferrer"
             target="_blank"

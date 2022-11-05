@@ -1,12 +1,12 @@
 import Image from 'next/image';
-import { REACTRIX, CLEMENTINE, BOOKMARKR } from 'lib/contants';
+import { AVOMA, REACTRIX, CLEMENTINE, BOOKMARKR } from 'lib/contants';
 import ProjectLink from './ProjectLink';
 
 export default function Information() {
   return (
     <div className="leading-loose">
-      <div className="grid items-center grid-rows-2 duration-300 ease-in-out sm:grid-cols-4 sm:grid-rows-1">
-        <div className="relative w-24 h-24 col-span-1">
+      <div className="grid grid-rows-2 items-center duration-300 ease-in-out sm:grid-cols-4 sm:grid-rows-1">
+        <div className="relative col-span-1 h-24 w-24">
           <Image
             className="rounded-full"
             alt="Avatar"
@@ -14,11 +14,11 @@ export default function Information() {
             width={200}
             height={200}
           />
-          <span className="absolute flex items-center justify-center w-8 h-8 m-auto text-center rounded-full pointer-events-none z-2 -top-1 -right-1 animate-gradient bg-gradient-to-tr from-lime-400 via-sky-400 to-rose-400">
+          <span className="z-2 pointer-events-none absolute -top-1 -right-1 m-auto flex h-8 w-8 animate-gradient items-center justify-center rounded-full bg-gradient-to-tr from-lime-400 via-sky-400 to-rose-400 text-center">
             ✌️
           </span>
         </div>
-        <div className="grid col-span-3 pt-2 sm:pt-0">
+        <div className="col-span-3 grid pt-2 sm:pt-0">
           <h2 className="font-bold text-neutral-800 dark:text-neutral-200">
             Kevin H. Chung
           </h2>
@@ -26,16 +26,18 @@ export default function Information() {
         </div>
       </div>
       <div className="mt-2 text-neutral-800 sm:mt-12 dark:text-neutral-200">
-        {'Currently prototyping applications at '}
+        {'Currently making meetings more productive at '}
+        <ProjectLink {...AVOMA} />
+        {'. Previously optimized application performance at '}
         <ProjectLink {...REACTRIX} />
-        {', saving thoughts & ideas at '}
-        <ProjectLink {...CLEMENTINE} />
-        {', and collecting hyperlinks at '}
-        <ProjectLink {...BOOKMARKR} />
         {'.'}
       </div>
-      <div className="mt-6 text-neutral-800 dark:text-neutral-200">
-        {'Building ideas and experimenting with new tools in the open.'}
+      <div className="mt-2 text-neutral-800 sm:mt-6 dark:text-neutral-200">
+        {'Saving thoughts & ideas at '}
+        <ProjectLink {...CLEMENTINE} />
+        {' and collecting hyperlinks at '}
+        <ProjectLink {...BOOKMARKR} />
+        {' to explore new tools and libraries.'}
       </div>
     </div>
   );

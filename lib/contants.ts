@@ -5,6 +5,12 @@ import {
   ReaderIcon,
 } from 'components/Icons';
 
+export const AVOMA = {
+  name: 'Avoma',
+  href: 'https://www.avoma.com/',
+  src: '/avoma.png',
+};
+
 export const REACTRIX = {
   name: 'Reactrix',
   href: 'https://www.reactrix.app/',
