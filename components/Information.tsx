@@ -32,13 +32,6 @@ export default function Information() {
         <ProjectLink {...REACTRIX} />
         {'.'}
       </div>
-      <div className="mt-2 text-neutral-800 sm:mt-6 dark:text-neutral-200">
-        {'Saving thoughts & ideas at '}
-        <ProjectLink {...CLEMENTINE} />
-        {' and collecting hyperlinks at '}
-        <ProjectLink {...BOOKMARKR} />
-        {' to explore new tools and libraries.'}
-      </div>
     </div>
   );
 }

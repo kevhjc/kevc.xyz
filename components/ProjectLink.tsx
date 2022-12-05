@@ -1,7 +1,6 @@
 import { useState, Fragment } from 'react';
 import Image from 'next/image';
 import { Popover, Transition } from '@headlessui/react';
-import cn from 'classnames';
 import { ProjectProps } from 'lib/interfaces';
 
 export default function ProjectLink({ name, href, src }: ProjectProps) {
@@ -12,7 +11,7 @@ export default function ProjectLink({ name, href, src }: ProjectProps) {
       {() => (
         <>
           <a
-            className="underline decoration-neutral-400 decoration-1 underline-offset-2 transition duration-100 hover:decoration-neutral-600 focus:text-neutral-500 focus:ring-neutral-500 dark:decoration-neutral-500 dark:hover:decoration-neutral-300 dark:focus:text-neutral-400 dark:focus:ring-neutral-400/40"
+            className="text-neutral-700 underline decoration-neutral-400 decoration-1 underline-offset-2 transition duration-100 hover:text-neutral-900 hover:decoration-neutral-900 focus:text-neutral-500 focus:ring-neutral-500 dark:text-neutral-300 dark:decoration-neutral-500 dark:hover:text-neutral-200 dark:hover:decoration-neutral-200 dark:focus:text-neutral-400 dark:focus:ring-neutral-400/40"
             href={href}
             rel="noopener noreferrer"
             target="_blank"
@@ -34,7 +33,13 @@ export default function ProjectLink({ name, href, src }: ProjectProps) {
             <Popover.Panel className="absolute z-10 mt-1 w-[80px]">
               <div className="overflow-hidden">
                 <div className="relative">
-                  <Image alt={name} src={src} width={80} height={80} />
+                  <Image
+                    className="rounded-md"
+                    alt={name}
+                    src={src}
+                    width={80}
+                    height={80}
+                  />
                 </div>
               </div>
             </Popover.Panel>
