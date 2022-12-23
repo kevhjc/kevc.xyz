@@ -25,10 +25,10 @@ export default function Music() {
   }, [absoluteDate]);
 
   return (
-    <div className="mb-8 leading-snug mt-14">
+    <div className="mt-16 leading-snug">
       <h2 className="text-black dark:text-neutral-200">Music</h2>
-      <div className="grid items-center grid-flow-col grid-rows-3 mt-4 transition-all w-fit gap-x-4">
-        <div className="w-16 h-16 row-span-3 overflow-hidden duration-300 ease-in-out rounded-sm aspect-square bg-neutral-200 hover:scale-105 dark:bg-neutral-800">
+      <div className="mt-4 grid w-fit grid-flow-col grid-rows-3 items-center gap-x-4 transition-all">
+        <div className="row-span-3 aspect-square h-16 w-16 overflow-hidden rounded-sm bg-neutral-200 duration-300 ease-in-out hover:scale-105 dark:bg-neutral-800">
           {cover && (
             <a href={url} rel="noopener noreferrer" target="_blank">
               <Image
@@ -68,14 +68,14 @@ export default function Music() {
           <Skeleton className="h-[0.75rem] w-40" />
         )}
         {title ? (
-          <span className="truncate text-md text-neutral-800 dark:text-neutral-200">
+          <span className="text-md truncate text-neutral-800 dark:text-neutral-200">
             {title}
           </span>
         ) : (
           <Skeleton className="h-[1rem] w-28" />
         )}
         {artist ? (
-          <span className="text-sm truncate md:text-md text-neutral-500 dark:text-neutral-400">
+          <span className="md:text-md truncate text-sm text-neutral-500 dark:text-neutral-400">
             {artist}
           </span>
         ) : (
