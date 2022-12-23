@@ -2,7 +2,8 @@ import {
   GitHubIcon,
   LinkedInIcon,
   InstagramIcon,
-  ReaderIcon,
+  ReadCvIcon,
+  TumblrIcon,
 } from 'components/Icons';
 
 export const AVOMA = {
@@ -50,5 +51,11 @@ export const INSTAGRAM = {
 export const READCV = {
   name: 'Read.cv',
   href: 'https://read.cv/kevc',
-  icon: ReaderIcon,
+  icon: ReadCvIcon,
+};
+
+export const TUMBLR = {
+  name: 'Tumblr',
+  href: 'https://mood.kevc.xyz',
+  icon: TumblrIcon,
 };
