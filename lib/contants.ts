@@ -1,6 +1,5 @@
 import {
   GitHubIcon,
-  LinkedInIcon,
   InstagramIcon,
   ReadCvIcon,
   TumblrIcon,
@@ -34,12 +33,6 @@ export const GITHUB = {
   name: 'GitHub',
   href: 'https://github.com/kevhjc',
   icon: GitHubIcon,
-};
-
-export const LINKEDIN = {
-  name: 'LinkedIn',
-  href: 'https://www.linkedin.com/in/kevc',
-  icon: LinkedInIcon,
 };
 
 export const INSTAGRAM = {

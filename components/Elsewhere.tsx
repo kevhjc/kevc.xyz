@@ -1,5 +1,5 @@
 import StandardLink from './StandardLink';
-import { GITHUB, LINKEDIN, INSTAGRAM, READCV, TUMBLR } from 'lib/contants';
+import { GITHUB, INSTAGRAM, READCV, TUMBLR } from 'lib/contants';
 
 export default function Elsewhere() {
   return (
@@ -9,7 +9,6 @@ export default function Elsewhere() {
         <StandardLink {...INSTAGRAM} />
         <StandardLink {...TUMBLR} />
         <StandardLink {...GITHUB} />
-        <StandardLink {...LINKEDIN} />
         <StandardLink {...READCV} />
       </div>
     </div>

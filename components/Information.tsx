@@ -30,7 +30,7 @@ export default function Information() {
         <ProjectLink {...AVOMA} />
         {'. Previously optimized application performance at '}
         <ProjectLink {...REACTRIX} />
-        {'.'}
+        {'. Architectural designer in a past life.'}
       </div>
     </div>
   );
