@@ -8,7 +8,7 @@ export default function Information() {
       <div className="p-4 text-neutral-800 dark:text-neutral-200">
         {"Hey there, I'm "}
         <ExternalLink {...KEVIN} />
-        {', a software engineer based in Los Angeles, CA. '}
+        {', a software engineer based in Los Angeles, California. '}
         {'Currently at '}
         <ExternalLink {...AVOMA} />
         {', helping to make meetings more productive. '}
