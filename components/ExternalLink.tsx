@@ -1,9 +1,10 @@
 import { useState, Fragment } from 'react';
 import Image from 'next/image';
 import { Popover, Transition } from '@headlessui/react';
-import { ProjectProps } from 'lib/interfaces';
 
-export default function ProjectLink({ name, href, src }: ProjectProps) {
+import { ExternalLinkProps } from 'lib/interfaces';
+
+export default function ExternalLink({ name, href, src }: ExternalLinkProps) {
   const [isShowing, setIsShowing] = useState(false);
 
   return (

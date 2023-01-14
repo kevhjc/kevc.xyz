@@ -1,9 +1,8 @@
-import {
-  GitHubIcon,
-  InstagramIcon,
-  ReadCvIcon,
-  TumblrIcon,
-} from 'components/Icons';
+export const KEVIN = {
+  name: 'Kevin',
+  href: 'https://read.cv/kevc',
+  src: '/avatar.png',
+};
 
 export const AVOMA = {
   name: 'Avoma',
@@ -27,28 +26,4 @@ export const BOOKMARKR = {
   name: 'Bookmarkr',
   href: 'https://www.bookmarkr.link/',
   src: '/bookmarkr.png',
-};
-
-export const GITHUB = {
-  name: 'GitHub',
-  href: 'https://github.com/kevhjc',
-  icon: GitHubIcon,
-};
-
-export const INSTAGRAM = {
-  name: 'Instagram',
-  href: 'https://instagram.com/kevhjc',
-  icon: InstagramIcon,
-};
-
-export const READCV = {
-  name: 'Read.cv',
-  href: 'https://read.cv/kevc',
-  icon: ReadCvIcon,
-};
-
-export const TUMBLR = {
-  name: 'Tumblr',
-  href: 'https://mood.kevc.xyz',
-  icon: TumblrIcon,
 };

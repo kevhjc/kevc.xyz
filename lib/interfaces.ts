@@ -4,16 +4,10 @@ export interface ContainerProps {
   children: JSX.Element[] | JSX.Element;
 }
 
-export interface ProjectProps {
+export interface ExternalLinkProps {
   name: string;
   href: string;
   src: string;
-}
-
-export interface StandardLinkProps {
-  name: string;
-  href: string;
-  icon: any;
 }
 
 // Last.fm

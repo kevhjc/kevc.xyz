@@ -5,6 +5,7 @@ import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 import isYesterday from 'date-fns/isYesterday';
 import { useLatestSong } from 'hooks/useLatestSong';
 import { capitalize } from 'lib/utils';
+
 import Skeleton from './Skeleton';
 
 export default function Music() {
@@ -25,9 +26,8 @@ export default function Music() {
   }, [absoluteDate]);
 
   return (
-    <div className="mt-8 leading-snug sm:mt-16">
-      <h2 className="text-black dark:text-neutral-200">Music</h2>
-      <div className="mt-4 grid w-fit grid-flow-col grid-rows-3 items-center gap-x-4 transition-all">
+    <div className="mb-4 p-4">
+      <div className="grid w-fit grid-flow-col grid-rows-3 items-center gap-x-4 transition-all">
         <div className="row-span-3 aspect-square h-16 w-16 overflow-hidden rounded-sm bg-neutral-200 duration-300 ease-in-out hover:scale-105 dark:bg-neutral-800">
           {cover && (
             <a href={url} rel="noopener noreferrer" target="_blank">
@@ -59,8 +59,8 @@ export default function Music() {
               <h2 className="font-mono text-xs font-bold">{relativeDate}</h2>
             )}
             {playing && (
-              <h2 className="font-mono text-xs font-bold">
-                Currently listening
+              <h2 className="truncate font-mono text-xs font-bold">
+                Currently listening to
               </h2>
             )}
           </div>
@@ -68,14 +68,14 @@ export default function Music() {
           <Skeleton className="h-[0.75rem] w-40" />
         )}
         {title ? (
-          <span className="text-md truncate text-neutral-800 dark:text-neutral-200">
+          <span className="truncate text-base text-neutral-800 dark:text-neutral-200">
             {title}
           </span>
         ) : (
           <Skeleton className="h-[1rem] w-28" />
         )}
         {artist ? (
-          <span className="md:text-md truncate text-sm text-neutral-500 dark:text-neutral-400">
+          <span className="truncate text-sm text-neutral-500 dark:text-neutral-400">
             {artist}
           </span>
         ) : (
