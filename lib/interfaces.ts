@@ -7,7 +7,7 @@ export interface ContainerProps {
 export interface ExternalLinkProps {
   name: string;
   href: string;
-  src: string;
+  src?: string;
 }
 
 // Last.fm

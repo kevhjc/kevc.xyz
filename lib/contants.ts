@@ -10,20 +10,12 @@ export const AVOMA = {
   src: '/avoma.png',
 };
 
-export const REACTRIX = {
-  name: 'Reactrix',
-  href: 'https://www.reactrix.app/',
-  src: '/reactrix.png',
+export const INSTAGRAM = {
+  name: 'photos',
+  href: 'https://www.instagram.com/kevhjc/',
 };
 
-export const CLEMENTINE = {
-  name: 'Clementine',
-  href: 'https://www.clementine.today/',
-  src: '/clementine.png',
-};
-
-export const BOOKMARKR = {
-  name: 'Bookmarkr',
-  href: 'https://www.bookmarkr.link/',
-  src: '/bookmarkr.png',
+export const GITHUB = {
+  name: 'side projects',
+  href: 'https://github.com/kevhjc?tab=repositories',
 };

@@ -60,7 +60,7 @@ export default function Music() {
             )}
             {playing && (
               <h2 className="truncate font-mono text-xs font-bold">
-                Currently listening to
+                Currently listening
               </h2>
             )}
           </div>
