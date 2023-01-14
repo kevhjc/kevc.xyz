@@ -3,7 +3,7 @@ import ExternalLink from './ExternalLink';
 
 export default function Information() {
   return (
-    <div className="p-4 text-neutral-800 dark:text-neutral-200">
+    <div className="p-2 text-neutral-800 sm:p-4 dark:text-neutral-200">
       {"Hey there, I'm "}
       <ExternalLink {...KEVIN} />
       {

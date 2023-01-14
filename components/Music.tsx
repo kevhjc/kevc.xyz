@@ -26,7 +26,7 @@ export default function Music() {
   }, [absoluteDate]);
 
   return (
-    <div className="mb-4 p-4">
+    <div className="p-2 sm:mb-4 sm:p-4">
       <div className="grid w-fit grid-flow-col grid-rows-3 items-center gap-x-4 transition-all">
         <div className="row-span-3 aspect-square h-16 w-16 overflow-hidden rounded-sm bg-neutral-200 duration-300 ease-in-out hover:scale-105 dark:bg-neutral-800">
           {cover && (
