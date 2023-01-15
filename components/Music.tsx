@@ -27,7 +27,7 @@ export default function Music() {
 
   return (
     <div className="p-4 sm:mb-4">
-      <div className="grid w-fit grid-flow-col grid-rows-3 items-center gap-x-4 transition-all">
+      <div className="grid w-fit grid-flow-col items-center gap-x-4 transition-all">
         <div className="row-span-3 aspect-square h-16 w-16 overflow-hidden rounded-sm bg-neutral-200 duration-300 ease-in-out hover:scale-105 dark:bg-neutral-800">
           {cover && (
             <a href={url} rel="noopener noreferrer" target="_blank">
@@ -42,13 +42,13 @@ export default function Music() {
           )}
         </div>
         {absoluteDate || playing ? (
-          <div className="flex items-center justify-start text-red-500 dark:text-red-400">
+          <div className="flex items-center justify-start gap-x-2 text-red-500 dark:text-red-400">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className={cn(
                 playing
-                  ? 'mr-2 h-4 w-4 flex-none animate-pulse'
-                  : 'mr-2 h-4 w-4 flex-none'
+                  ? 'h-3 w-3 flex-none animate-pulse'
+                  : 'h-3 w-3 flex-none'
               )}
               viewBox="0 0 20 20"
               fill="currentColor"
@@ -65,7 +65,7 @@ export default function Music() {
             )}
           </div>
         ) : (
-          <Skeleton className="h-[0.75rem] w-40" />
+          <Skeleton className="h-[1rem] w-48" />
         )}
         {title ? (
           <span className="truncate text-base text-neutral-800 dark:text-neutral-200">
