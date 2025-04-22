@@ -9,7 +9,7 @@ export default function Skeleton({
     <span
       className={cn(
         className,
-        'skeleton inline-flex rounded-sm bg-neutral-200 align-middle dark:bg-neutral-800'
+        'skeleton inline-flex animate-pulse rounded-sm bg-neutral-200 align-middle dark:bg-neutral-500'
       )}
       {...props}
     />

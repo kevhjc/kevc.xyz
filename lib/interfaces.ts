@@ -8,6 +8,7 @@ export interface ExternalLinkProps {
   name: string;
   href: string;
   src?: string;
+  showArrow?: boolean;
 }
 
 // Last.fm

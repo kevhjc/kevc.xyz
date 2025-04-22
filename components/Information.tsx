@@ -5,13 +5,15 @@ import ExternalLink from './ExternalLink';
 export default function Information() {
   return (
     <Fragment>
-      <div className="p-4 text-neutral-800 dark:text-neutral-200">
-        {"I'm "}
-        <ExternalLink {...KEVIN} />
-        {', a software engineer based in Los Angeles, CA. '}
-        {'Currently helping to make meetings more productive at '}
-        <ExternalLink {...AVOMA} />
-        {'.'}
+      <div className="flex flex-col text-neutral-800 dark:text-neutral-300">
+        <p>
+          {"I'm "}
+          <ExternalLink {...KEVIN} />
+          {', a software engineer based in Los Angeles, CA. '}
+          {"Currently, I'm at "}
+          <ExternalLink {...AVOMA} />
+          {' building a more productive way to have meetings. '}
+        </p>
       </div>
     </Fragment>
   );

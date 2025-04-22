@@ -4,7 +4,12 @@ import { Popover, Transition } from '@headlessui/react';
 
 import { ExternalLinkProps } from 'lib/interfaces';
 
-export default function ExternalLink({ name, href, src }: ExternalLinkProps) {
+export default function ExternalLink({
+  name,
+  href,
+  src,
+  showArrow,
+}: ExternalLinkProps) {
   const [isShowing, setIsShowing] = useState(false);
 
   return (
@@ -12,7 +17,7 @@ export default function ExternalLink({ name, href, src }: ExternalLinkProps) {
       {() => (
         <Fragment>
           <a
-            className="text-neutral-700 underline decoration-neutral-400 decoration-1 underline-offset-2 transition duration-100 hover:text-neutral-900 hover:decoration-neutral-900 focus:text-neutral-500 focus:ring-neutral-500 dark:text-neutral-300 dark:decoration-neutral-500 dark:hover:text-neutral-200 dark:hover:decoration-neutral-200 dark:focus:text-neutral-400 dark:focus:ring-neutral-400/40"
+            className="text-neutral-700 underline decoration-neutral-400 decoration-1 underline-offset-4 transition duration-100 hover:text-neutral-900 hover:decoration-neutral-900 focus:text-neutral-500 focus:ring-neutral-500 dark:text-neutral-200 dark:decoration-neutral-500 dark:hover:text-neutral-200 dark:hover:decoration-neutral-200 dark:focus:text-neutral-400 dark:focus:ring-neutral-400/40"
             href={href}
             rel="noopener noreferrer"
             target="_blank"
@@ -21,6 +26,13 @@ export default function ExternalLink({ name, href, src }: ExternalLinkProps) {
           >
             {name}
           </a>
+
+          {showArrow && (
+            <span className="ml-1 cursor-default text-neutral-400 dark:text-neutral-500">
+              ↗
+            </span>
+          )}
+
           {src && (
             <Transition
               as={Fragment}

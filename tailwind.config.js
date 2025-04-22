@@ -17,20 +17,14 @@ module.exports = {
       screens: {
         dark: { raw: '(prefers-color-scheme: dark)' },
       },
-      animation: {
-        gradient: 'gradient-xy 8s ease infinite',
-      },
       keyframes: {
-        'gradient-xy': {
-          '0%, 100%': {
-            'background-size': '500% 500%',
-            'background-position': 'top',
-          },
-          '50%': {
-            'background-size': '500% 500%',
-            'background-position': 'bottom',
-          },
+        slideFadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(-20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+      },
+      animation: {
+        slideFadeIn: 'slideFadeIn 1.4s ease-out forwards',
       },
     },
     fontFamily: {
