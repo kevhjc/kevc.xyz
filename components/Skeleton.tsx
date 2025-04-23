@@ -1,10 +1,7 @@
 import { ComponentProps } from 'react';
 import cn from 'classnames';
 
-export default function Skeleton({
-  className,
-  ...props
-}: ComponentProps<'span'>) {
+const Skeleton = ({ className, ...props }: ComponentProps<'span'>) => {
   return (
     <span
       className={cn(
@@ -14,4 +11,6 @@ export default function Skeleton({
       {...props}
     />
   );
-}
+};
+
+export default Skeleton;

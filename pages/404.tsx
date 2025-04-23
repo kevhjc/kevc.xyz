@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Container from 'components/Container';
 import NotFound from 'components/NotFound';
 
-export default function Custom404() {
+const Custom404 = () => {
   return (
     <Container>
       <Head>
@@ -12,4 +12,6 @@ export default function Custom404() {
       <NotFound />
     </Container>
   );
-}
+};
+
+export default Custom404;

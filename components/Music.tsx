@@ -4,42 +4,44 @@ import cn from 'classnames';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 import isYesterday from 'date-fns/isYesterday';
 import { useLatestSong } from 'hooks/useLatestSong';
-
 import Skeleton from './Skeleton';
 
-export default function Music() {
+const Music = () => {
   const { title, artist, album, date, cover, url, playing } = useLatestSong();
 
-  const [isLoading, setLoading] = useState<boolean>(true);
+  const [isLoading, setLoading] = useState(true);
 
-  const absoluteDate = useMemo(() => {
-    if (!date) return;
+  const absoluteDate = useMemo(
+    () => (date ? new Date(date * 1000) : null),
+    [date]
+  );
 
-    return new Date(date * 1000);
-  }, [date]);
-
-  const relativeDate = useMemo(() => {
-    if (!absoluteDate) return;
-
-    return isYesterday(absoluteDate)
-      ? 'yesterday'
-      : formatDistanceToNow(absoluteDate, { addSuffix: true });
-  }, [absoluteDate]);
+  const relativeDate = useMemo(
+    () =>
+      absoluteDate
+        ? isYesterday(absoluteDate)
+          ? 'yesterday'
+          : formatDistanceToNow(absoluteDate, { addSuffix: true })
+        : null,
+    [absoluteDate]
+  );
 
   return (
-    <div className="my-8 flex w-full flex-col space-y-2 rounded-lg bg-neutral-200 p-1 dark:bg-neutral-800">
-      <div className="flex w-full items-center gap-x-3 rounded-md bg-neutral-100 p-2 drop-shadow transition-all dark:bg-neutral-700">
-        <div className="flex aspect-square h-12 w-12 flex-shrink-0 overflow-hidden rounded-sm bg-neutral-200 transition-all duration-300 ease-in-out hover:rotate-1 hover:scale-105 dark:bg-neutral-800">
+    <div className="my-8 flex w-full flex-col space-y-2 rounded-lg bg-neutral-200 p-2 dark:bg-neutral-800">
+      <div className="flex w-full items-center gap-x-3 rounded-md bg-neutral-100 p-2 shadow transition-all dark:bg-neutral-700">
+        <div className="flex aspect-square h-12 w-12 flex-shrink-0 overflow-hidden rounded bg-neutral-200 transition-all duration-300 ease-in-out hover:scale-105 dark:bg-neutral-800">
           {cover && (
-            <a href={url} rel="noopener noreferrer" target="_blank">
+            <a href={url} target="_blank" rel="noopener noreferrer">
               <Image
-                onLoadingComplete={() => setLoading(false)}
-                alt={title}
                 src={cover}
-                objectFit="cover"
+                alt={title}
                 width={500}
                 height={500}
-                className={isLoading ? 'scale-110 blur-lg' : 'scale-100 blur-0'}
+                objectFit="cover"
+                onLoadingComplete={() => setLoading(false)}
+                className={cn(
+                  isLoading ? 'scale-110 blur-lg' : 'scale-100 blur-0'
+                )}
               />
             </a>
           )}
@@ -52,42 +54,34 @@ export default function Music() {
           )}
         >
           {title ? (
-            <span className="truncate text-sm text-neutral-800 dark:text-neutral-200">
+            <span className="truncate text-sm text-neutral-700 dark:text-neutral-300">
               {title}
             </span>
           ) : (
             <Skeleton className="h-3 w-60" />
           )}
-
           {artist ? (
-            <span className="truncate text-sm text-neutral-500 dark:text-neutral-300">
-              {`${artist} – ${album}`}
-            </span>
+            <span className="truncate text-sm text-neutral-600 dark:text-neutral-400">{`${artist} – ${album}`}</span>
           ) : (
             <Skeleton className="h-3 w-40" />
           )}
         </div>
       </div>
 
-      <div className="ml-1 flex h-4 truncate pb-1">
+      <div className="ml-1 flex h-4 truncate pb-px">
         {absoluteDate || playing ? (
           <div className="flex min-w-0 items-center gap-x-2">
             <div
-              className={cn(
-                'flex h-2 w-2 flex-shrink-0 rounded-full',
-                playing && 'animate-pulse bg-red-500',
-                absoluteDate && 'bg-neutral-300 dark:bg-neutral-600'
-              )}
+              className={cn('flex h-2 w-2 flex-shrink-0 rounded-full', {
+                'animate-pulse bg-red-500': playing,
+                'bg-neutral-300 dark:bg-neutral-600': absoluteDate,
+              })}
             />
-
             {absoluteDate && (
-              <h2 className="overflow-hidden truncate whitespace-nowrap text-xs text-neutral-500 dark:text-neutral-400">
-                Last played <strong>{relativeDate}</strong>
-              </h2>
+              <h2 className="truncate text-xs text-neutral-500 dark:text-neutral-400">{`Last played ${relativeDate}`}</h2>
             )}
-
             {playing && (
-              <h2 className="overflow-hidden truncate whitespace-nowrap text-xs text-red-500 dark:text-red-400">
+              <h2 className="truncate text-xs text-red-500 dark:text-red-400">
                 Now playing
               </h2>
             )}
@@ -98,4 +92,6 @@ export default function Music() {
       </div>
     </div>
   );
-}
+};
+
+export default Music;

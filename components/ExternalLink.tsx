@@ -1,66 +1,68 @@
-import { useState, Fragment } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import { Popover, Transition } from '@headlessui/react';
-
 import { ExternalLinkProps } from 'lib/interfaces';
 
-export default function ExternalLink({
-  name,
-  href,
-  src,
-  showArrow,
-}: ExternalLinkProps) {
-  const [isShowing, setIsShowing] = useState(false);
+const ArrowIcon = () => {
+  return (
+    <svg
+      width="8"
+      height="8"
+      viewBox="0 0 12 12"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+};
+
+const ExternalLink = ({ name, href, src, showArrow }: ExternalLinkProps) => {
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <Popover className="relative inline-block">
-      {() => (
-        <Fragment>
-          <a
-            className="text-neutral-700 underline decoration-neutral-400 decoration-1 underline-offset-4 transition duration-100 hover:text-neutral-900 hover:decoration-neutral-900 focus:text-neutral-500 focus:ring-neutral-500 dark:text-neutral-200 dark:decoration-neutral-500 dark:hover:text-neutral-200 dark:hover:decoration-neutral-200 dark:focus:text-neutral-400 dark:focus:ring-neutral-400/40"
-            href={href}
-            rel="noopener noreferrer"
-            target="_blank"
-            onMouseEnter={() => setIsShowing(true)}
-            onMouseLeave={() => setIsShowing(false)}
-          >
-            {name}
-          </a>
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-x-1 text-neutral-500 underline underline-offset-4 transition-all hover:text-neutral-900 hover:no-underline dark:text-neutral-300 dark:hover:text-neutral-100"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        {name}
+        {showArrow && <ArrowIcon />}
+      </a>
 
-          {showArrow && (
-            <span className="ml-1 cursor-default text-neutral-400 dark:text-neutral-500">
-              ↗
-            </span>
-          )}
-
-          {src && (
-            <Transition
-              as={Fragment}
-              show={isShowing}
-              enter="transition ease-out duration-300"
-              enterFrom="opacity-0 translate-y-1"
-              enterTo="opacity-100 translate-y-0"
-              leave="transition ease-in duration-150"
-              leaveFrom="opacity-100 translate-y-0"
-              leaveTo="opacity-0 translate-y-1"
-            >
-              <Popover.Panel className="absolute z-10 mt-1 w-[80px]">
-                <div className="overflow-hidden">
-                  <div className="relative">
-                    <Image
-                      className="rounded-md"
-                      alt={name}
-                      src={src}
-                      width={80}
-                      height={80}
-                    />
-                  </div>
-                </div>
-              </Popover.Panel>
-            </Transition>
-          )}
-        </Fragment>
+      {src && (
+        <Transition
+          as="div"
+          show={isHovered}
+          enter="transition-opacity duration-300 ease-out"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="transition-opacity duration-150 ease-in"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          <Popover.Panel className="absolute z-10 mt-1 w-[60px]">
+            <div className="overflow-hidden rounded-md">
+              <Image
+                className="rounded-md"
+                alt={name}
+                src={src}
+                width={300}
+                height={300}
+              />
+            </div>
+          </Popover.Panel>
+        </Transition>
       )}
     </Popover>
   );
-}
+};
+
+export default ExternalLink;

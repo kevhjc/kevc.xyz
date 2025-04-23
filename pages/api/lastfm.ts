@@ -5,8 +5,8 @@ const LASTFM_API = 'https://ws.audioscrobbler.com/2.0/';
 const LASTFM_USERNAME = 'kevhjc';
 const LASTFM_ENDPOINT = `${LASTFM_API}?method=user.getrecenttracks&user=${LASTFM_USERNAME}&api_key=${process.env.NEXT_PUBLIC_LASTFM_API_KEY}&format=json&limit=1`;
 
-export const STALE_DURATION = 60;
-export const FRESH_DURATION = STALE_DURATION / 2;
+const STALE_DURATION = 60;
+const FRESH_DURATION = STALE_DURATION / 2;
 
 export async function getLatestSong(): Promise<SongResponse | undefined> {
   try {

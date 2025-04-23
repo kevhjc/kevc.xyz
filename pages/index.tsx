@@ -3,7 +3,7 @@ import Information from 'components/Information';
 import Music from 'components/Music';
 import Elsewhere from 'components/Elsewhere';
 
-export default function Home() {
+const Home = () => {
   return (
     <Container>
       <Information />
@@ -11,4 +11,6 @@ export default function Home() {
       <Elsewhere />
     </Container>
   );
-}
+};
+
+export default Home;
