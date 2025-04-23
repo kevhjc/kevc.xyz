@@ -21,7 +21,8 @@ const ArrowIcon = () => {
 };
 
 const ExternalLink = ({ name, href, src, showArrow }: ExternalLinkProps) => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+  const [isLoading, setLoading] = useState<boolean>(true);
 
   return (
     <Popover className="relative inline-block">
@@ -51,11 +52,11 @@ const ExternalLink = ({ name, href, src, showArrow }: ExternalLinkProps) => {
           <Popover.Panel className="absolute z-10 mt-1 w-[60px]">
             <div className="overflow-hidden rounded-md">
               <Image
-                className="rounded-md"
-                alt={name}
                 src={src}
+                alt={name}
                 width={300}
                 height={300}
+                className="rounded-md"
               />
             </div>
           </Popover.Panel>

@@ -9,7 +9,7 @@ import Skeleton from './Skeleton';
 const Music = () => {
   const { title, artist, album, date, cover, url, playing } = useLatestSong();
 
-  const [isLoading, setLoading] = useState(true);
+  const [isLoading, setLoading] = useState<boolean>(true);
 
   const absoluteDate = useMemo(
     () => (date ? new Date(date * 1000) : null),
@@ -39,9 +39,7 @@ const Music = () => {
                 height={500}
                 objectFit="cover"
                 onLoadingComplete={() => setLoading(false)}
-                className={cn(
-                  isLoading ? 'scale-110 blur-lg' : 'scale-100 blur-0'
-                )}
+                className={cn(isLoading ? 'blur-lg' : 'blur-0')}
               />
             </a>
           )}
@@ -58,12 +56,12 @@ const Music = () => {
               {title}
             </span>
           ) : (
-            <Skeleton className="h-3 w-60" />
+            <Skeleton className="w-60" />
           )}
           {artist ? (
             <span className="truncate text-sm text-neutral-600 dark:text-neutral-400">{`${artist} – ${album}`}</span>
           ) : (
-            <Skeleton className="h-3 w-40" />
+            <Skeleton className="w-40" />
           )}
         </div>
       </div>
@@ -87,7 +85,7 @@ const Music = () => {
             )}
           </div>
         ) : (
-          <Skeleton className="h-3 w-40" />
+          <Skeleton className="w-40 self-center" />
         )}
       </div>
     </div>
