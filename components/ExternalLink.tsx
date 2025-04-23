@@ -6,23 +6,24 @@ import { ExternalLinkProps } from 'lib/interfaces';
 const ArrowIcon = () => {
   return (
     <svg
-      width="8"
-      height="8"
-      viewBox="0 0 12 12"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+      width="10"
+      height="10"
+      strokeLinejoin="round"
+      viewBox="0 0 16 16"
+      className="-mt-1"
     >
       <path
-        d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z"
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M5.75001 2H5.00001V3.5H5.75001H11.4393L2.21968 12.7197L1.68935 13.25L2.75001 14.3107L3.28034 13.7803L12.4988 4.56182V10.25V11H13.9988V10.25V3C13.9988 2.44772 13.5511 2 12.9988 2H5.75001Z"
         fill="currentColor"
-      />
+      ></path>
     </svg>
   );
 };
 
 const ExternalLink = ({ name, href, src, showArrow }: ExternalLinkProps) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
-  const [isLoading, setLoading] = useState<boolean>(true);
 
   return (
     <Popover className="relative inline-block">

@@ -74,3 +74,7 @@ export interface SongResponse {
   url: string;
   playing: boolean;
 }
+
+export interface MusicIconProps {
+  className?: string;
+}
