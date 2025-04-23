@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import Image from 'next/image';
+
 const ArrowIcon = () => {
   return (
     <svg width="12" height="12" strokeLinejoin="round" viewBox="0 0 16 16">
@@ -24,11 +26,21 @@ const NotFound = () => {
           </span>
         </div>
       </h2>
+
+      <Image
+        src="/roy.gif"
+        alt="roy"
+        width={480}
+        height={197}
+        className="pointer-events-none rounded-lg"
+      />
+
       <p className="text-neutral-800 dark:text-neutral-200">
-        All those hyperlinks will be lost in time… like tears in rain.
+        All those hyperlinks will be lost in time, like tears in rain.
       </p>
+
       <Link href="/">
-        <button className="my-8 flex w-fit cursor-pointer items-center gap-2 rounded bg-neutral-200 p-2 px-4 text-sm text-black transition-all duration-300 hover:bg-neutral-300 dark:bg-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-800">
+        <button className="mt-4 flex w-fit cursor-pointer items-center gap-2 rounded bg-neutral-200 p-2 px-4 text-sm text-black transition-all duration-300 hover:bg-neutral-300 dark:bg-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-800">
           <ArrowIcon />
           Go back
         </button>
