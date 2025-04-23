@@ -42,16 +42,17 @@ const Music = () => {
   );
 
   return (
-    <div className="my-8 flex w-full flex-col space-y-2 rounded-lg bg-neutral-200 p-2 dark:bg-neutral-800">
+    <div className="my-8 flex w-full flex-col space-y-2 rounded-lg bg-neutral-200 p-2 transition-all duration-300 hover:shadow dark:bg-neutral-800">
       <div className="flex h-4 truncate pb-px">
         {absoluteDate || playing ? (
           <div className="flex min-w-0 items-center gap-x-1.5">
             <MusicIcon
-              className={cn('mt-px text-neutral-400', {
-                'animate-pulse text-red-500 dark:text-red-400': playing,
-                'text-neutral-500 dark:text-neutral-400':
-                  absoluteDate && !playing,
-              })}
+              className={cn(
+                'mt-px',
+                playing
+                  ? 'animate-pulse text-red-500 dark:text-red-400'
+                  : 'text-neutral-500 dark:text-neutral-400'
+              )}
             />
             {absoluteDate && (
               <h2 className="truncate text-xs text-neutral-500 dark:text-neutral-400">{`Last played ${relativeDate}`}</h2>

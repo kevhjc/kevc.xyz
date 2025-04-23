@@ -37,8 +37,9 @@
   isolation: isolate;
 }
 
-*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol
-      *)) {
+*:where(
+    :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
+  ) {
   all: unset;
   display: revert;
 }
@@ -80,6 +81,11 @@ textarea {
 meter {
   -webkit-appearance: revert;
   appearance: revert;
+}
+
+::selection {
+  background: #fff176;
+  color: #171717;
 }
 
 ::placeholder {
