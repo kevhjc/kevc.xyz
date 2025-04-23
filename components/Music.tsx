@@ -43,6 +43,30 @@ const Music = () => {
 
   return (
     <div className="my-8 flex w-full flex-col space-y-2 rounded-lg bg-neutral-200 p-2 dark:bg-neutral-800">
+      <div className="flex h-4 truncate pb-px">
+        {absoluteDate || playing ? (
+          <div className="flex min-w-0 items-center gap-x-1.5">
+            <MusicIcon
+              className={cn('mt-px text-neutral-400', {
+                'animate-pulse text-red-500 dark:text-red-400': playing,
+                'text-neutral-500 dark:text-neutral-400':
+                  absoluteDate && !playing,
+              })}
+            />
+            {absoluteDate && (
+              <h2 className="truncate text-xs text-neutral-500 dark:text-neutral-400">{`Last played ${relativeDate}`}</h2>
+            )}
+            {playing && (
+              <h2 className="truncate text-xs text-red-500 dark:text-red-400">
+                Currently playing
+              </h2>
+            )}
+          </div>
+        ) : (
+          <Skeleton className="w-40 self-center" />
+        )}
+      </div>
+
       <div className="flex w-full items-center gap-x-3 rounded-md bg-neutral-100 p-2 shadow transition-all dark:bg-neutral-700">
         <div className="flex aspect-square h-12 w-12 flex-shrink-0 overflow-hidden rounded bg-neutral-200 transition-all duration-300 ease-in-out hover:scale-105 dark:bg-neutral-800">
           {cover && (
@@ -79,30 +103,6 @@ const Music = () => {
             <Skeleton className="w-40" />
           )}
         </div>
-      </div>
-
-      <div className="ml-1 flex h-4 truncate pb-px">
-        {absoluteDate || playing ? (
-          <div className="flex min-w-0 items-center gap-x-1.5">
-            <MusicIcon
-              className={cn('mt-px text-neutral-400', {
-                'animate-pulse text-red-500 dark:text-red-400': playing,
-                'text-neutral-500 dark:text-neutral-400':
-                  absoluteDate && !playing,
-              })}
-            />
-            {absoluteDate && (
-              <h2 className="truncate text-xs text-neutral-500 dark:text-neutral-400">{`Last played ${relativeDate}`}</h2>
-            )}
-            {playing && (
-              <h2 className="truncate text-xs text-red-500 dark:text-red-400">
-                Now playing
-              </h2>
-            )}
-          </div>
-        ) : (
-          <Skeleton className="w-40 self-center" />
-        )}
       </div>
     </div>
   );

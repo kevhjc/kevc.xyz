@@ -3,13 +3,13 @@ import ExternalLink from './ExternalLink';
 
 const Information = () => {
   return (
-    <div className="text-neutral-800 dark:text-neutral-400">
+    <div className="inline-block leading-8 text-neutral-800 dark:text-neutral-400">
       {"I'm "}
       <ExternalLink {...KEVIN} />
-      {', a software engineer based in Los Angeles, CA. '}
-      {"Currently, I'm at "}
+      {', a frontend developer based in Los Angeles. '}
+      {"These days, I'm at "}
       <ExternalLink {...AVOMA} />
-      {' building a more productive way to have meetings. '}
+      {' helping make meetings a whole lot more productive.'}
     </div>
   );
 };
