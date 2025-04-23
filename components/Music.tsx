@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import Image from 'next/image';
 import cn from 'classnames';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
@@ -9,6 +9,8 @@ import Skeleton from './Skeleton';
 
 export default function Music() {
   const { title, artist, album, date, cover, url, playing } = useLatestSong();
+
+  const [isLoading, setLoading] = useState<boolean>(true);
 
   const absoluteDate = useMemo(() => {
     if (!date) return;
@@ -27,15 +29,17 @@ export default function Music() {
   return (
     <div className="my-8 flex w-full flex-col space-y-2 rounded-lg bg-neutral-200 p-1 dark:bg-neutral-800">
       <div className="flex w-full items-center gap-x-3 rounded-md bg-neutral-100 p-2 drop-shadow transition-all dark:bg-neutral-700">
-        <div className="flex aspect-square h-12 w-12 flex-shrink-0 overflow-hidden rounded-sm bg-neutral-200 transition-all duration-300 ease-in-out hover:scale-105 dark:bg-neutral-800">
+        <div className="flex aspect-square h-12 w-12 flex-shrink-0 overflow-hidden rounded-sm bg-neutral-200 transition-all duration-300 ease-in-out hover:rotate-1 hover:scale-105 dark:bg-neutral-800">
           {cover && (
             <a href={url} rel="noopener noreferrer" target="_blank">
               <Image
+                onLoadingComplete={() => setLoading(false)}
                 alt={title}
                 src={cover}
                 objectFit="cover"
                 width={500}
                 height={500}
+                className={isLoading ? 'scale-110 blur-lg' : 'scale-100 blur-0'}
               />
             </a>
           )}
@@ -67,18 +71,18 @@ export default function Music() {
 
       <div className="ml-1 flex h-4 truncate pb-1">
         {absoluteDate || playing ? (
-          <div className="flex min-w-0 items-center justify-start gap-x-2">
+          <div className="flex min-w-0 items-center gap-x-2">
             <div
               className={cn(
                 'flex h-2 w-2 flex-shrink-0 rounded-full',
                 playing && 'animate-pulse bg-red-500',
-                absoluteDate && 'bg-neutral-400 dark:bg-neutral-500'
+                absoluteDate && 'bg-neutral-300 dark:bg-neutral-600'
               )}
             />
 
             {absoluteDate && (
               <h2 className="overflow-hidden truncate whitespace-nowrap text-xs text-neutral-500 dark:text-neutral-400">
-                Last played {relativeDate}
+                Last played <strong>{relativeDate}</strong>
               </h2>
             )}
 

@@ -12,7 +12,7 @@ async function json(url: string) {
 export default function MyApp({ Component, pageProps }: AppProps) {
   const meta = {
     title: 'Kevin H. Chung',
-    description: 'Software engineer based in Los Angeles, California.',
+    description: 'Software engineer based in Los Angeles, CA.',
     type: 'website',
   };
 
