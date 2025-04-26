@@ -9,7 +9,7 @@ const Information = () => {
       {', a frontend developer based in Los Angeles. '}
       {"These days, I'm at "}
       <ExternalLink {...AVOMA} />
-      {' helping teams run smarter meetings & gain insights.'}
+      {' helping teams run more productive and insightful meetings.'}
     </div>
   );
 };

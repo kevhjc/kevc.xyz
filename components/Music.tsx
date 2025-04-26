@@ -42,8 +42,8 @@ const Music = () => {
   );
 
   return (
-    <div className="my-8 flex w-full flex-col space-y-2 rounded-lg bg-neutral-200 p-2 transition-all duration-300 hover:shadow dark:bg-neutral-800">
-      <div className="flex h-4 truncate pb-px">
+    <div className="my-8 flex w-full flex-col space-y-2 rounded-lg bg-neutral-200 p-2 transition-all duration-300 dark:bg-neutral-800">
+      <div className="flex truncate px-1 py-0.5">
         {absoluteDate || playing ? (
           <div className="flex min-w-0 items-center gap-x-1.5">
             <MusicIcon
@@ -51,11 +51,11 @@ const Music = () => {
                 'mt-px',
                 playing
                   ? 'animate-pulse text-red-500 dark:text-red-400'
-                  : 'text-neutral-500 dark:text-neutral-400'
+                  : 'text-neutral-400 dark:text-neutral-600'
               )}
             />
             {absoluteDate && (
-              <h2 className="truncate text-xs text-neutral-500 dark:text-neutral-400">{`Last played ${relativeDate}`}</h2>
+              <h2 className="truncate text-xs text-neutral-400 dark:text-neutral-600">{`Last played ${relativeDate}`}</h2>
             )}
             {playing && (
               <h2 className="truncate text-xs text-red-500 dark:text-red-400">
@@ -68,8 +68,8 @@ const Music = () => {
         )}
       </div>
 
-      <div className="flex w-full items-center gap-x-3 rounded-md bg-neutral-100 p-2 shadow transition-all dark:bg-neutral-700">
-        <div className="flex aspect-square h-12 w-12 flex-shrink-0 overflow-hidden rounded bg-neutral-200 transition-all duration-300 ease-in-out hover:scale-105 dark:bg-neutral-800">
+      <div className="flex w-full items-center gap-x-3 rounded-md border border-neutral-300/75 bg-neutral-100 p-2 drop-shadow-sm transition-all dark:border-neutral-600/50 dark:bg-neutral-700">
+        <div className="flex aspect-square h-12 w-12 flex-shrink-0 overflow-hidden rounded bg-neutral-200 transition-all duration-300 ease-in-out hover:scale-[1.03] dark:bg-neutral-800">
           {cover && (
             <a href={url} target="_blank" rel="noopener noreferrer">
               <Image

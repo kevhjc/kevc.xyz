@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Image from 'next/image';
+import cn from 'classnames';
 import { Popover, Transition } from '@headlessui/react';
 import { ExternalLinkProps } from 'lib/interfaces';
 
@@ -36,7 +37,11 @@ const ExternalLink = ({ name, href, src, showArrow }: ExternalLinkProps) => {
         onMouseLeave={() => setIsHovered(false)}
       >
         {name}
-        {showArrow && <ArrowIcon />}
+        {showArrow && (
+          <div className={cn(isHovered ? 'animate-pulse' : '')}>
+            <ArrowIcon />
+          </div>
+        )}
       </a>
 
       {src && (

@@ -1,6 +1,6 @@
 export const KEVIN = {
   name: 'Kevin',
-  href: 'https://read.cv/kevc',
+  href: 'https://kevc.tumblr.com/',
   src: '/avatar.png',
 };
 
@@ -18,7 +18,7 @@ export const GITHUB = {
 
 export const LINKEDIN = {
   name: 'LinkedIn',
-  href: 'https://www.linkedin.com/in/kevc/',
+  href: 'https://www.linkedin.com/in/kevc',
   showArrow: true,
 };
 
