@@ -5,7 +5,7 @@ const Container = (props: ContainerProps) => {
 
   return (
     <main className="m-auto min-w-0 animate-slideFadeIn sm:max-w-[520px]">
-      <div className="flex min-h-screen flex-1 flex-col items-center gap-y-4 p-8 sm:justify-center">
+      <div className="flex flex-1 flex-col items-center gap-y-4 p-8 sm:min-h-screen sm:justify-center">
         {children}
       </div>
     </main>
