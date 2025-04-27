@@ -68,8 +68,8 @@ const Music = () => {
         )}
       </div>
 
-      <div className="flex w-full items-center gap-x-3 rounded-md border border-neutral-300/75 bg-neutral-100 p-2 drop-shadow-sm transition-all dark:border-neutral-600/50 dark:bg-neutral-700">
-        <div className="flex aspect-square h-12 w-12 flex-shrink-0 overflow-hidden rounded bg-neutral-200 transition-all duration-300 ease-in-out hover:scale-[1.03] dark:bg-neutral-800">
+      <div className="flex w-full items-center gap-x-2 rounded-md border border-neutral-300/75 bg-neutral-100 p-2 drop-shadow-sm transition-all dark:border-neutral-600/50 dark:bg-neutral-700">
+        <div className="flex aspect-square h-12 w-12 flex-shrink-0 select-none overflow-hidden rounded bg-neutral-200 transition-all duration-300 ease-in-out hover:scale-[1.03] dark:bg-neutral-800">
           {cover && (
             <a href={url} target="_blank" rel="noopener noreferrer">
               <Image

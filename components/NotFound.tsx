@@ -17,25 +17,26 @@ const ArrowIcon = () => {
 const NotFound = () => {
   return (
     <div className="flex flex-col gap-y-4">
-      <h2 className="text-lg text-black dark:text-neutral-200">
-        <div className="flex items-center gap-x-4 font-mono">
+      <div className="text-lg text-black dark:text-neutral-200">
+        <div className="flex justify-start gap-x-3 font-mono">
           <span className="font-bold">404</span>
           <span className="text-neutral-400 dark:text-neutral-400">
             Page not found
           </span>
         </div>
-      </h2>
+      </div>
 
       <Image
         src="/roy.gif"
         alt="roy"
         width={480}
         height={197}
-        className="pointer-events-none rounded-lg"
+        className="pointer-events-none select-none rounded"
       />
 
       <p className="text-neutral-800 dark:text-neutral-200">
-        All those hyperlinks will be lost in time, like tears in rain.
+        All those uniform resource locators will be lost in time, like tears in
+        rain.
       </p>
 
       <Link href="/">

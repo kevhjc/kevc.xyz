@@ -6,7 +6,7 @@ const Information = () => {
     <div className="inline-block leading-8 text-neutral-800 dark:text-neutral-400">
       {"I'm "}
       <ExternalLink {...KEVIN} />
-      {', a frontend developer based in Los Angeles. '}
+      {', a frontend developer based in Los Angeles, California. '}
       {"These days, I'm at "}
       <ExternalLink {...AVOMA} />
       {' helping teams run more productive and insightful meetings.'}
