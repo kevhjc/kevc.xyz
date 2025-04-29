@@ -85,12 +85,7 @@ const Music = () => {
           )}
         </div>
 
-        <div
-          className={cn(
-            'flex w-full max-w-sm flex-col gap-y-1 truncate',
-            !(title || artist) && 'gap-y-2'
-          )}
-        >
+        <div className="flex w-full max-w-sm flex-col gap-y-1 truncate">
           {title ? (
             <div className="flex w-full">
               <a
