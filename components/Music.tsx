@@ -64,7 +64,7 @@ const Music = () => {
             )}
           </div>
         ) : (
-          <Skeleton className="my-0.5 w-40 self-center" />
+          <Skeleton className="w-40 self-center" />
         )}
       </div>
 
@@ -87,7 +87,7 @@ const Music = () => {
 
         <div
           className={cn(
-            'flex w-full max-w-sm flex-col truncate',
+            'flex w-full max-w-sm flex-col gap-y-1 truncate',
             !(title || artist) && 'gap-y-2'
           )}
         >
