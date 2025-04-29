@@ -51,11 +51,11 @@ const Music = () => {
                 'mt-px flex-shrink-0',
                 playing
                   ? 'animate-pulse text-red-500 dark:text-red-400'
-                  : 'text-neutral-400 dark:text-neutral-500'
+                  : 'text-neutral-500'
               )}
             />
             {absoluteDate && (
-              <h2 className="truncate text-xs text-neutral-400 dark:text-neutral-500">{`Last played ${relativeDate}`}</h2>
+              <h2 className="truncate text-xs text-neutral-500">{`Last played ${relativeDate}`}</h2>
             )}
             {playing && (
               <h2 className="truncate text-xs text-red-500 dark:text-red-400">
