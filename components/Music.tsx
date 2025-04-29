@@ -42,20 +42,20 @@ const Music = () => {
   );
 
   return (
-    <div className="my-8 flex w-full flex-col space-y-2 rounded-lg bg-neutral-200 p-2 transition-all duration-300 dark:bg-neutral-800">
+    <div className="my-8 flex w-full flex-col space-y-2 rounded-lg bg-neutral-200 p-2 dark:bg-neutral-800">
       <div className="flex truncate px-1 py-0.5">
         {absoluteDate || playing ? (
           <div className="flex min-w-0 items-center gap-x-1.5">
             <MusicIcon
               className={cn(
-                'mt-px',
+                'mt-px flex-shrink-0',
                 playing
                   ? 'animate-pulse text-red-500 dark:text-red-400'
-                  : 'text-neutral-400 dark:text-neutral-600'
+                  : 'text-neutral-400 dark:text-neutral-500'
               )}
             />
             {absoluteDate && (
-              <h2 className="truncate text-xs text-neutral-400 dark:text-neutral-600">{`Last played ${relativeDate}`}</h2>
+              <h2 className="truncate text-xs text-neutral-400 dark:text-neutral-500">{`Last played ${relativeDate}`}</h2>
             )}
             {playing && (
               <h2 className="truncate text-xs text-red-500 dark:text-red-400">
@@ -69,7 +69,7 @@ const Music = () => {
       </div>
 
       <div className="flex w-full items-center gap-x-2 rounded-md border border-neutral-300/75 bg-neutral-100 p-2 drop-shadow-sm transition-all dark:border-neutral-600/50 dark:bg-neutral-700">
-        <div className="flex aspect-square h-12 w-12 flex-shrink-0 select-none overflow-hidden rounded bg-neutral-200 transition-all duration-300 ease-in-out hover:scale-[1.03] dark:bg-neutral-800">
+        <div className="flex aspect-square h-12 w-12 flex-shrink-0 select-none overflow-hidden rounded bg-neutral-200 dark:bg-neutral-800">
           {cover && (
             <a href={url} target="_blank" rel="noopener noreferrer">
               <Image
@@ -92,14 +92,21 @@ const Music = () => {
           )}
         >
           {title ? (
-            <span className="truncate text-sm text-neutral-700 dark:text-neutral-300">
-              {title}
-            </span>
+            <div className="flex w-full">
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block truncate text-sm text-neutral-600 underline underline-offset-4 transition-all hover:no-underline dark:text-neutral-300"
+              >
+                {title}
+              </a>
+            </div>
           ) : (
             <Skeleton className="w-60" />
           )}
           {artist ? (
-            <span className="truncate text-sm text-neutral-600 dark:text-neutral-400">{`${artist} – ${album}`}</span>
+            <span className="truncate text-sm text-neutral-600 dark:text-neutral-300">{`${artist} – ${album}`}</span>
           ) : (
             <Skeleton className="w-40" />
           )}
