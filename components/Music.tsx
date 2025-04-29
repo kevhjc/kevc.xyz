@@ -43,7 +43,7 @@ const Music = () => {
 
   return (
     <div className="my-8 flex w-full flex-col space-y-2 rounded-lg bg-neutral-200 p-2 dark:bg-neutral-800">
-      <div className="flex truncate px-1 py-0.5">
+      <div className="-mt-px flex truncate">
         {absoluteDate || playing ? (
           <div className="flex min-w-0 items-center gap-x-1.5">
             <MusicIcon
