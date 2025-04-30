@@ -64,7 +64,7 @@ const Music = () => {
             )}
           </div>
         ) : (
-          <Skeleton className="my-0 w-40 self-center" />
+          <Skeleton className="!my-0 w-40 self-center" />
         )}
       </div>
 
