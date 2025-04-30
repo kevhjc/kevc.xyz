@@ -79,7 +79,7 @@ const Music = () => {
                 height={500}
                 objectFit="cover"
                 onLoadingComplete={() => setLoading(false)}
-                className={cn(isLoading ? 'blur-lg' : 'blur-0')}
+                className={cn('rounded blur-0', isLoading && 'blur-lg')}
               />
             </a>
           )}
