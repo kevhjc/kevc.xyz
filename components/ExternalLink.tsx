@@ -31,7 +31,7 @@ const ExternalLink = ({ name, href, src, showArrow }: ExternalLinkProps) => {
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-x-1 text-neutral-500 underline underline-offset-4 transition-all hover:text-neutral-900 hover:no-underline dark:text-neutral-300 dark:hover:text-neutral-100"
+        className="flex items-center gap-x-1 text-neutral-600 underline underline-offset-4 transition-all hover:text-neutral-900 hover:no-underline dark:text-neutral-300 dark:hover:text-neutral-100"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
