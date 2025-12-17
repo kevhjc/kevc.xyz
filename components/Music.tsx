@@ -43,33 +43,8 @@ const Music = () => {
 
   return (
     <div className="my-8 flex w-full flex-col space-y-1.5 rounded-lg bg-neutral-200 p-1.5 dark:bg-neutral-800">
-      <div className="flex truncate">
-        {absoluteDate || playing ? (
-          <div className="mx-0.5 flex min-w-0 items-center gap-x-1.5">
-            <MusicIcon
-              className={cn(
-                'mt-px flex-shrink-0',
-                playing
-                  ? 'animate-pulse text-red-500 dark:text-red-400'
-                  : 'text-neutral-400 dark:text-neutral-500'
-              )}
-            />
-            {absoluteDate && (
-              <h2 className="truncate text-xs text-neutral-400 dark:text-neutral-500">{`Last played ${relativeDate}`}</h2>
-            )}
-            {playing && (
-              <h2 className="truncate text-xs text-red-500 dark:text-red-400">
-                Currently playing
-              </h2>
-            )}
-          </div>
-        ) : (
-          <Skeleton className="!my-0 w-40 self-center" />
-        )}
-      </div>
-
       <div className="flex w-full items-center gap-x-2 rounded-md border border-neutral-300/75 bg-neutral-100 p-1.5 drop-shadow-sm transition-all dark:border-neutral-600/50 dark:bg-neutral-700">
-        <div className="flex aspect-square h-12 w-12 flex-shrink-0 select-none overflow-hidden rounded bg-neutral-200 dark:bg-neutral-800">
+        <div className="flex aspect-square h-12 w-12 flex-shrink-0 scale-95 select-none overflow-hidden rounded bg-neutral-200 transition-all ease-in-out hover:scale-100 dark:bg-neutral-800">
           {cover && (
             <a href={url} target="_blank" rel="noopener noreferrer">
               <Image
@@ -100,12 +75,40 @@ const Music = () => {
           ) : (
             <Skeleton className="w-60" />
           )}
+
           {artist ? (
             <span className="truncate text-sm text-neutral-600 dark:text-neutral-300">{`${artist} – ${album}`}</span>
           ) : (
             <Skeleton className="w-40" />
           )}
         </div>
+      </div>
+
+      <div className="flex truncate">
+        {absoluteDate || playing ? (
+          <div className="mx-0.5 flex min-w-0 items-center gap-x-1.5">
+            <MusicIcon
+              className={cn(
+                'mt-px flex-shrink-0',
+                playing
+                  ? 'animate-pulse text-red-500 dark:text-red-400'
+                  : 'text-neutral-400 dark:text-neutral-500'
+              )}
+            />
+
+            {absoluteDate && (
+              <h2 className="truncate text-xs text-neutral-400 dark:text-neutral-500">{`Last played ${relativeDate}`}</h2>
+            )}
+
+            {playing && (
+              <h2 className="truncate text-xs text-red-500 dark:text-red-400">
+                Currently playing
+              </h2>
+            )}
+          </div>
+        ) : (
+          <Skeleton className="!my-0 w-40 self-center" />
+        )}
       </div>
     </div>
   );

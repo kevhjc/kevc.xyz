@@ -8,7 +8,6 @@ const Home = () => {
     <Container>
       <Information />
       <Music />
-      <Elsewhere />
     </Container>
   );
 };
